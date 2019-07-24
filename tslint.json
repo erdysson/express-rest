@@ -1,0 +1,35 @@
+{
+  "extends": ["tslint:recommended", "tslint-eslint-rules"],
+  "rules": {
+    "array-bracket-spacing": [
+      true,
+      "never",
+      {
+        "singleValue": true,
+        "objectsInArrays": true,
+        "arraysInArrays": true
+      }
+    ],
+    "block-spacing": [true, "always"],
+    "brace-style": [true, "1tbs", { "allowSingleLine": true }],
+    "handle-callback-err": [true, "err"],
+    "no-constant-condition": true,
+    "no-control-regex": true,
+    "no-duplicate-case": true,
+    "no-empty-character-class": true,
+    "no-ex-assign": true,
+    "no-extra-boolean-cast": true,
+    "no-extra-semi": true,
+    "no-inner-declarations": [true, "both"],
+    "no-invalid-regexp": true,
+    "no-irregular-whitespace": true,
+    "no-regex-spaces": true,
+    "no-unexpected-multiline": true,
+    "use-isnan": true,
+    "valid-jsdoc": true,
+    "valid-typeof": true
+  },
+  "exclude": [
+    "node_modules/**"
+  ]
+}
