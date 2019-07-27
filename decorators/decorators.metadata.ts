@@ -6,12 +6,13 @@ import logger from 'morgan';
 import createHttpError from 'http-errors';
 import http from 'http';
 import {IRouteHandler, IServerConfig} from './decorator.interface';
+import {HttpMethod} from './decorator.enum';
 
 
 class DecoratorsMetadata {
     private static controllerMap: Map<string, IRouteHandler[]> = new Map<string, IRouteHandler[]>();
 
-    public static registerRequestHandler(path: string, target: Object, propertyKey: string, method: string) {
+    public static registerRequestHandler(path: string, target: Object, propertyKey: string, method: HttpMethod) {
         const controllerName: string = target.constructor.name;
         if (!DecoratorsMetadata.controllerMap.has(controllerName)) {
             DecoratorsMetadata.controllerMap.set(controllerName, []);
@@ -37,7 +38,7 @@ class DecoratorsMetadata {
             if (DecoratorsMetadata.controllerMap.has(controllerName)) {
                 const requestHandlers: IRouteHandler[] = DecoratorsMetadata.controllerMap.get(controllerName);
                 requestHandlers.forEach((requestHandler: IRouteHandler) =>
-                    (app as any)[requestHandler.httpMethod](requestHandler.path, instance[requestHandler.method]));
+                    (app as any)[requestHandler.httpMethod.valueOf().toString()](requestHandler.path, instance[requestHandler.method]));
             }
         });
         // catch 404 and forward to error handler
