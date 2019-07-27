@@ -2,6 +2,7 @@ import {HttpMethod} from './decorator.enum';
 
 export interface IServerConfig {
     controllers: Function[];
+    providers: Function[];
 }
 
 export interface IRouteHandler {
@@ -9,4 +10,14 @@ export interface IRouteHandler {
     className: string;
     method: string;
     httpMethod: HttpMethod;
+}
+
+export interface IProviderConfig {
+    name: string;
+    index: number;
+}
+
+export interface IControllerConfig {
+    providers: IProviderConfig[];
+    routeHandlers: IRouteHandler[];
 }

@@ -18,6 +18,10 @@ export const DELETE = (path: string = '') => (target: Object, propertyKey: strin
     DecoratorsMetadata.registerRequestHandler(path, target, propertyKey, HttpMethod.DELETE);
 };
 
+export const Provide = (name: string) => (target: Function, propertyKey: string, parameterIndex: number) => {
+    DecoratorsMetadata.registerProvider(name, target, parameterIndex);
+};
+
 export const Server = (config: IServerConfig) => (target: Function) => {
     DecoratorsMetadata.initServer(target, config);
 };
