@@ -1,7 +1,16 @@
 import {Request, Response} from 'express-serve-static-core';
-import {GET, POST} from '../decorators/decorators';
+import {GET, POST, Provide} from '../decorators/decorators';
+import UserProvider from '../providers/User.provider';
+import AuthProvider from '../providers/Auth.provider';
 
 export class LoginController {
+
+    constructor(
+        @Provide('UserProvider') private UserProvider: UserProvider,
+        @Provide('AuthProvider') private AuthProvider: AuthProvider
+    ) {
+        //
+    }
 
     @GET('/login')
     public getLoginPage(req: Request, res: Response): void {
