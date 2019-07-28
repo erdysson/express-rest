@@ -2,6 +2,7 @@ import DecoratorsMetadata from './decorators.metadata';
 import {IServerConfig} from './decorator.interface';
 import {HttpMethod} from './decorator.enum';
 
+// http methods
 export const GET = (path: string = '') => (target: Object, propertyKey: string, descriptor: PropertyDescriptor) => {
     DecoratorsMetadata.registerRequestHandler(path, target, propertyKey, HttpMethod.GET);
 };
@@ -18,10 +19,12 @@ export const DELETE = (path: string = '') => (target: Object, propertyKey: strin
     DecoratorsMetadata.registerRequestHandler(path, target, propertyKey, HttpMethod.DELETE);
 };
 
+// providers
 export const Provide = (name: string) => (target: Function, propertyKey: string, parameterIndex: number) => {
     DecoratorsMetadata.registerProvider(name, target, parameterIndex);
 };
 
+// server configuration
 export const Server = (config: IServerConfig) => (target: Function) => {
     DecoratorsMetadata.initServer(target, config);
 };
