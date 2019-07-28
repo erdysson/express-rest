@@ -1,5 +1,13 @@
 import {HttpMethod} from './decorator.enum';
 
+export type Class<T> = new (...args: any[]) => T;
+
+export interface IServer {
+    port: number;
+    onListening: () => void;
+    onError: (error: any) => void;
+}
+
 export interface IServerConfig {
     controllers: Function[];
     providers: Function[];
