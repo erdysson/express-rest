@@ -18,6 +18,7 @@ export interface IRouteHandler {
     className: string;
     method: string;
     httpMethod: HttpMethod;
+    authenticated: boolean;
 }
 
 export interface IProviderConfig {
@@ -27,5 +28,5 @@ export interface IProviderConfig {
 
 export interface IControllerConfig {
     providers: IProviderConfig[];
-    routeHandlers: IRouteHandler[];
+    routeHandlers: Map<string, IRouteHandler>;
 }

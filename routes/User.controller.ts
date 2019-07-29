@@ -1,5 +1,5 @@
 import {Request, Response} from 'express-serve-static-core';
-import {GET, POST, Provide} from '../decorators/decorators';
+import {Authenticated, GET, POST, Provide} from '../decorators/decorators';
 import UserProvider from '../providers/User.provider';
 
 export class UserController {
@@ -10,14 +10,23 @@ export class UserController {
         //
     }
 
+    @Authenticated()
     @GET('/users')
     public getUsers(req: Request, res: Response): void {
-        res.json({users: [1, 2, 3, 4]});
+        try {
+            res.json({users: [1, 2, 3, 4]});
+        } catch (e) {
+            res.sendStatus(500);
+        }
     }
 
+    @Authenticated()
     @POST('/user/create')
     public createUser(req: Request, res: Response): void {
-        console.log('req body :', req.body);
-        res.json({success: true});
+        try {
+            res.json({success: true});
+        } catch (e) {
+            res.sendStatus(500);
+        }
     }
 }

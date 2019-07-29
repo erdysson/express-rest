@@ -1,29 +1,48 @@
 import {Request, Response, NextFunction, Express} from "express-serve-static-core";
 import express from 'express';
+import http from "http";
 import {IControllerConfig, IProviderConfig, IRouteHandler, IServerConfig} from './decorator.interface';
 import {HttpMethod} from './decorator.enum';
-import http from "http";
 
 class DecoratorsMetadata {
     private static providerInstanceMap: Map<string, object> = new Map<string, object>();
 
-    private static controllerMap: Map<string, IControllerConfig> = new Map<string, IControllerConfig>();
+    private static controllers: Map<string, IControllerConfig> = new Map<string, IControllerConfig>();
 
     public static registerProvider(providerName: string, providedTo: Function, index: number): void {
         const controllerName: string = providedTo.name;
-        if (!DecoratorsMetadata.controllerMap.has(controllerName)) {
-            DecoratorsMetadata.controllerMap.set(controllerName, {providers: [], routeHandlers: []});
+        if (!DecoratorsMetadata.controllers.has(controllerName)) {
+            DecoratorsMetadata.controllers.set(controllerName, {providers: [], routeHandlers: new Map<string, IRouteHandler>()});
         }
-        DecoratorsMetadata.controllerMap.get(controllerName).providers.push({name: providerName, index: index});
+        DecoratorsMetadata.controllers.get(controllerName).providers.push({name: providerName, index: index});
     }
 
     public static registerRequestHandler(path: string, target: Object, propertyKey: string, method: HttpMethod) {
-        console.log('register request handler is called', path, target, propertyKey);
         const controllerName: string = target.constructor.name;
-        if (!DecoratorsMetadata.controllerMap.has(controllerName)) {
-            DecoratorsMetadata.controllerMap.set(controllerName, {providers: [], routeHandlers: []});
+        if (!DecoratorsMetadata.controllers.has(controllerName)) {
+            DecoratorsMetadata.controllers.set(controllerName, {providers: [], routeHandlers: new Map<string, IRouteHandler>()});
         }
-        DecoratorsMetadata.controllerMap.get(controllerName).routeHandlers.push({path: path, className: target.constructor.name, method: propertyKey, httpMethod: method});
+
+        if (!DecoratorsMetadata.controllers.get(controllerName).routeHandlers.has(propertyKey)) {
+            DecoratorsMetadata.controllers.get(controllerName).routeHandlers.set(propertyKey, {path: path, className: target.constructor.name, method: propertyKey, httpMethod: method, authenticated: false});
+        } else {
+            const authenticated: boolean = DecoratorsMetadata.controllers.get(controllerName).routeHandlers.get(propertyKey).authenticated;
+            DecoratorsMetadata.controllers.get(controllerName).routeHandlers.set(propertyKey, {path: path, className: target.constructor.name, method: propertyKey, httpMethod: method, authenticated: authenticated});
+        }
+    }
+
+    public static registerRequestHandlerAuthStatus(target: Object, propertyKey: string, authenticated: boolean) {
+        const controllerName: string = target.constructor.name;
+        if (!DecoratorsMetadata.controllers.has(controllerName)) {
+            DecoratorsMetadata.controllers.set(controllerName, {providers: [], routeHandlers: new Map<string, IRouteHandler>()});
+        }
+
+        if (!DecoratorsMetadata.controllers.get(controllerName).routeHandlers.has(propertyKey)) {
+            DecoratorsMetadata.controllers.get(controllerName).routeHandlers.set(propertyKey, {path: null, className: target.constructor.name, method: propertyKey, httpMethod: null, authenticated: true});
+        } else {
+            const {path, httpMethod} = DecoratorsMetadata.controllers.get(controllerName).routeHandlers.get(propertyKey);
+            DecoratorsMetadata.controllers.get(controllerName).routeHandlers.set(propertyKey, {path: path, className: target.constructor.name, method: propertyKey, httpMethod: httpMethod, authenticated: authenticated});
+        }
     }
 
     public static initServer(target: Function, config: IServerConfig): void {
@@ -38,18 +57,17 @@ class DecoratorsMetadata {
         // assignment of handlers to specified route paths
         config.controllers.forEach((Controller: Function) => {
             const controllerName: string = Controller.name;
-            if (DecoratorsMetadata.controllerMap.has(controllerName)) {
-                const {providers, routeHandlers} = DecoratorsMetadata.controllerMap.get(controllerName);
+            if (DecoratorsMetadata.controllers.has(controllerName)) {
+                const {providers, routeHandlers} = DecoratorsMetadata.controllers.get(controllerName);
                 const providerInstances: object[] = providers
                     .sort((provider1: IProviderConfig, provider2: IProviderConfig) => provider1.index - provider2.index)
                     .map((provider: IProviderConfig) => DecoratorsMetadata.providerInstanceMap.get(provider.name));
                 const instance: any = new (Controller as ObjectConstructor)(...providerInstances);
                 routeHandlers.forEach((routeHandler: IRouteHandler) => {
                     const httpMethod: string = routeHandler.httpMethod.valueOf().toString();
-                    (app as any)[httpMethod](
-                        routeHandler.path,
-                        (req: Request, res: Response, next: NextFunction) =>
-                            instance[routeHandler.method].apply(instance, [req, res, next])
+                    console.log(routeHandler.path, ', handled by', routeHandler.method, 'is authenticated :', routeHandler.authenticated);
+                    (app as any)[httpMethod](routeHandler.path, (req: Request, res: Response, next: NextFunction) =>
+                        instance[routeHandler.method].apply(instance, [req, res, next])
                     );
                 });
             }

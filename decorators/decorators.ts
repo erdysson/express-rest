@@ -24,6 +24,11 @@ export const Provide = (name: string) => (target: Function, propertyKey: string,
     DecoratorsMetadata.registerProvider(name, target, parameterIndex);
 };
 
+// security
+export const Authenticated = (auth: boolean = true) => (target: Object, propertyKey: string, descriptor: PropertyDescriptor) => {
+    DecoratorsMetadata.registerRequestHandlerAuthStatus(target, propertyKey, auth);
+};
+
 // server configuration
 export const Server = (config: IServerConfig) => (target: Function) => {
     DecoratorsMetadata.initServer(target, config);

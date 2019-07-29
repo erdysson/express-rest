@@ -9,6 +9,10 @@ export class IndexController {
 
     @GET('/')
     public index(req: Request, res: Response): void {
-        res.render('index', {title: 'Welcome'});
+        try {
+            res.render('index', {title: 'Welcome'});
+        } catch (e) {
+            res.sendStatus(500);
+        }
     }
 }
