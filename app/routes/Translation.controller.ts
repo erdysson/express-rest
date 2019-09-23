@@ -1,5 +1,5 @@
-import {Authenticated, GET, Provide} from '../../core/decorators/decorators';
-import { Request, Response } from 'express-serve-static-core';
+import {Authenticated, GET, Provide} from '../decorators/decorators';
+import {Request, Response} from 'express-serve-static-core';
 import TranslationProvider from '../providers/Translation.provider';
 
 class TranslationController {

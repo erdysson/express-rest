@@ -1,4 +1,4 @@
-import {Authenticated, POST, Provide} from '../../core/decorators/decorators';
+import {Authenticated, POST, Provide} from '../decorators/decorators';
 import { Request, Response } from 'express-serve-static-core';
 import ConfigProvider from '../providers/Config.provider';
 
