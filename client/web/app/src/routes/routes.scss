@@ -1,0 +1,71 @@
+.routes {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 100%;
+
+    .route-links {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        width: 100%;
+
+        .logo {
+            a {
+                color: black;
+            }
+        }
+
+        .route-links-wrapper {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            .route-link {
+                margin: 0 10px;
+                position: relative;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                a {
+                    color: #898989;
+                    text-transform: uppercase;
+
+                    &.active {
+
+                        &::after {
+                            background-color: #000000;
+                            bottom: -10px;
+                            content: '';
+                            height: 4px;
+                            left: 0;
+                            position: absolute;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .route-content {
+        display: flex;
+        flex-grow: 1;
+        flex-shrink: 1;
+        width: 100%;
+
+        & > * {
+            padding: 0 20px;
+            width: 100%;
+        }
+    }
+}

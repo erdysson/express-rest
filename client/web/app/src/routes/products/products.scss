@@ -1,0 +1,35 @@
+.route-products {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .route-product-links-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-grow: 0;
+        flex-shrink: 0;
+        padding: 10px 0;
+
+        .route-product-link {
+            margin: 0 10px;
+
+            a {
+                color: black;
+            }
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .route-product-content {
+        display: flex;
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+}

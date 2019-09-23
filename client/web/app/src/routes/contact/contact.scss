@@ -1,0 +1,60 @@
+.route-contact {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+
+    .location-img-wrapper {
+        align-items: center;
+        display: flex;
+        flex-grow: 0;
+        flex-shrink: 0;
+        justify-content: center;
+        width: 100%;
+
+        .location-img {
+            height: 450px;
+            width: 100%;
+        }
+    }
+
+    .contact-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-grow: 0;
+        flex-shrink: 0;
+        margin-top: 40px;
+        width: 100%;
+
+        .contact-detail {
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            font-family: Chivo-Light;
+            font-size: 14px;
+            justify-content: space-between;
+            line-height: 16px;
+            width: 35%;
+
+            .contact-title {
+                font-family: Chivo-Regular;
+                font-size: 16px;
+                font-weight: bold;
+            }
+
+            .contact-address-line {
+                margin-top: 10px;
+
+                &:first-child {
+                    margin-top: 20px;
+                }
+            }
+
+            .contact-phone-number,
+            .contact-opening-hours,
+            .contact-email {
+                margin-top: 10px;
+            }
+        }
+    }
+}

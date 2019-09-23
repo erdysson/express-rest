@@ -1,0 +1,33 @@
+.route-about {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-wrap: wrap;
+
+    .img-wrapper {
+        display: flex;
+        flex-grow: 0;
+        flex-shrink: 0;
+        width: 60%;
+
+        img {
+            height: 70%;
+            width: 100%;
+        }
+    }
+
+    .desc-wrapper {
+        display: flex;
+        flex-grow: 0;
+        flex-shrink: 0;
+        padding: 0 30px;
+        width: 40%;
+
+        .desc {
+            color: #898989;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 23px;
+        }
+    }
+}
