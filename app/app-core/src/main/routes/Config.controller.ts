@@ -17,7 +17,10 @@ class ConfigController {
             const branchCode: string = req.body.branchCode;
             this.ConfigProvider.getProductConfig(branchCode)
                 .then((translation: Record<string, string>) => res.json(translation))
-                .catch(() => res.sendStatus(500));
+                .catch((e) => {
+                    console.log(e);
+                    res.sendStatus(500)
+                });
 
         } catch (e) {
             res.sendStatus(404);

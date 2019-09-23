@@ -10,7 +10,7 @@ class ConfigProvider {
     }
 
     public getProductConfig(branchCode: string): Promise<Record<string, string>> {
-        const filePath: string = path.join(process.cwd(), 'configuration', 'product', `${branchCode}.json`);
+        const filePath: string = path.join(__dirname, '..', 'configuration', 'product', `${branchCode}.json`);
         return this.FileService.readJson(filePath);
     }
 }

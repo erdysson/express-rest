@@ -10,7 +10,7 @@ class TranslationProvider {
     }
 
     public get(branchCode: string): Promise<Record<string, string>> {
-        const filePath: string = path.join(process.cwd(), 'translations', `${branchCode}.json`);
+        const filePath: string = path.join(__dirname, '..', 'translations', `${branchCode}.json`);
         return this.FileService.readJson(filePath);
     }
 }
