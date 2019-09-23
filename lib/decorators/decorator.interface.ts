@@ -11,6 +11,7 @@ export interface IServer {
 export interface IServerConfig {
     controllers: Function[];
     providers: Function[];
+    port: number;
 }
 
 export interface IRouteHandler {

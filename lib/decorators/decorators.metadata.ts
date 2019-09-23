@@ -47,10 +47,9 @@ class DecoratorsMetadata {
 
     public static initServer(target: Function, config: IServerConfig): void {
         const app: Express = express();
-        const port: number = 3000;
         // initiate server class decorated by @Server
         const s = new (target as ObjectConstructor)(app);
-        app.set('port', port);
+        app.set('port', config.port);
         // creation of provider instances
         config.providers.forEach((Provider: Function) =>
             DecoratorsMetadata.providerInstanceMap.set(Provider.name, new (Provider as ObjectConstructor)()));
@@ -78,9 +77,7 @@ class DecoratorsMetadata {
             if (error.syscall !== 'listen') {
                 throw error;
             }
-
-            const bind = 'Port ' + port;
-
+            const bind = 'Port ' + config.port;
             // handle specific listen errors with friendly messages
             switch (error.code) {
                 case 'EACCES':
@@ -100,7 +97,7 @@ class DecoratorsMetadata {
             const bind = typeof addr === 'string' ? 'pipe ' + addr : 'port ' + addr.port;
             console.log('Listening on ' + bind);
         });
-        server.listen(port);
+        server.listen(config.port);
     }
 }
 

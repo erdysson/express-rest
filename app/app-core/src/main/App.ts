@@ -16,7 +16,8 @@ import ConfigProvider from './providers/Config.provider';
 
 @Server({
   providers: [UserProvider, AuthProvider, TranslationProvider, ConfigProvider],
-  controllers: [IndexController, LoginController, UserController, TranslationController, ConfigController]
+  controllers: [IndexController, LoginController, UserController, TranslationController, ConfigController],
+  port: 8080
 })
 class S {
 
