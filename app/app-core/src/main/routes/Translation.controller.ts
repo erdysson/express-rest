@@ -1,4 +1,4 @@
-import {Authenticated, GET, Provide} from '../decorators/decorators';
+import {Authenticated, GET, Provide} from '../../../../../lib/decorators/decorators';
 import {Request, Response} from 'express-serve-static-core';
 import TranslationProvider from '../providers/Translation.provider';
 

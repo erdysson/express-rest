@@ -1,5 +1,5 @@
 import {Request, Response} from 'express-serve-static-core';
-import {GET} from '../decorators/decorators';
+import {GET} from '../../../../../lib/decorators/decorators';
 
 export class IndexController {
 

@@ -1,5 +1,5 @@
 import {Request, Response} from 'express-serve-static-core';
-import {Authenticated, GET, POST, Provide} from '../decorators/decorators';
+import {Authenticated, GET, POST, Provide} from '../../../../../lib/decorators/decorators';
 import UserProvider from '../providers/User.provider';
 
 export class UserController {
