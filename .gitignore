@@ -1,3 +1,4 @@
 .idea
 express-rest.iml
 node_modules/
+**/*.js
