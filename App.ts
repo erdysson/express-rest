@@ -1,20 +1,22 @@
 import path from 'path';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
-import createHttpError from 'http-errors';
 import express from 'express';
-import http from 'http';
-import {Request, Response, NextFunction, Express} from "express-serve-static-core";
+import {Express} from "express-serve-static-core";
 import {IndexController} from './routes/Index.controller';
 import {LoginController} from './routes/Login.controller';
 import {UserController} from './routes/User.controller';
 import {Server} from './decorators/decorators';
 import UserProvider from './providers/User.provider';
 import AuthProvider from './providers/Auth.provider';
+import TranslationController from './routes/Translation.controller';
+import TranslationProvider from './providers/Translation.provider';
+import ConfigController from './routes/Config.controller';
+import ConfigProvider from './providers/Config.provider';
 
 @Server({
-  providers: [UserProvider, AuthProvider],
-  controllers: [IndexController, LoginController, UserController]
+  providers: [UserProvider, AuthProvider, TranslationProvider, ConfigProvider],
+  controllers: [IndexController, LoginController, UserController, TranslationController, ConfigController]
 })
 class S {
 

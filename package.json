@@ -6,7 +6,8 @@
     "start-old": "node ./bin/www",
     "start": "nodemon",
     "dev": "NODE_ENV=development ./node_modules/.bin/tsc -p . && DEBUG=express-rest,express* node ./App.js",
-    "prod": "NODE_ENV=production ./node_modules/.bin/tsc -p . && DEBUG=express-rest,express* node ./App.js"
+    "prod": "NODE_ENV=production ./node_modules/.bin/tsc -p . && DEBUG=express-rest,express* node ./App.js",
+    "start-db": "mongod"
   },
   "dependencies": {
     "@types/cookie-parser": "^1.4.1",

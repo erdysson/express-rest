@@ -1,0 +1,195 @@
+{
+  "tables": {
+    "title": "forma.product.tables",
+    "items": [
+      {
+        "name": "forma.product.table.dressoir.name",
+        "price": "$19.900,00",
+        "oldPrice": "$24.900,00",
+        "showPrice": true,
+        "imageUrl": "assets/img/mesas/forma_mesa_dressoir.jpg",
+        "fbLink": "https://www.facebook.com/commerce/products/1848754088530531/",
+        "showDetail": true,
+        "detail": {
+          "detailImages": [
+            "forma_mesa_dressoir_02.jpg",
+            "forma_mesa_dressoir_03.jpg"
+          ],
+          "measurements": "120 x 80 x 35cm ",
+          "description": "forma.product.table.dressoir.description"
+        }
+      }
+    ]
+},
+  "coffee-tables": {
+    "title": "forma.product.coffeetables",
+    "items": []
+  },
+  "tv-tables": {
+    "title": "forma.product.tvtables",
+    "items": [
+    {
+      "name": "forma.product.tvtable.frame.name",
+      "price": "$29.200,00",
+      "oldPrice": "$34.900,00",
+      "showPrice": true,
+      "imageUrl": "assets/img/muebles-tv/forma_muebletv_bar.jpg",
+      "fbLink": "https://www.facebook.com/commerce/products/1714513088603051/",
+      "showDetail": true,
+      "detail": {
+        "detailImages": [
+          "forma_muebletv_bar.jpg",
+          "forma_muebletv_bar_01.jpg"
+        ],
+        "measurements": "varias",
+        "description": "forma.product.tvtable.frame.description"
+      }
+    }
+  ]},
+  "desks": {
+    "title": "forma.product.desks",
+    "items": [
+    {
+      "name": "forma.product.desks.flot.name",
+      "price": "$31.200,00",
+      "oldPrice": " $38.700,00",
+      "showPrice": true,
+      "imageUrl": "assets/img/escritorios/forma_escritorio_flot_01.jpg",
+      "fbLink": "https://www.facebook.com/commerce/products/1921706494525097/",
+      "showDetail": true,
+      "detail": {
+        "detailImages": [
+          "forma_escritorio_flot_01.jpg",
+          "forma_escritorio_flot_02.jpg"
+        ],
+        "measurements": "200 x 60 cm",
+        "description": "forma.product.desks.flot.description"
+      }
+    }
+  ]},
+  "shelves": {
+    "title": "forma.product.shelves",
+    "items": [
+    {
+      "name": "forma.product.shelves.trama.name",
+      "price": "$61.120,00",
+      "oldPrice": "$73.200,00",
+      "showPrice": true,
+      "imageUrl": "assets/img/estanterias/forma_estanteria_modulor_01.jpg",
+      "fbLink": "https://www.facebook.com/commerce/products/2157051500978456/",
+      "showDetail": true,
+      "detail": {
+        "detailImages": [
+          "forma_estanteria_modulor_02.jpg",
+          "forma_estanteria_modulor_03.jpg"
+        ],
+        "measurements": "244 x 200 cm",
+        "description": "forma.product.shelves.trama.description"
+      }
+    },
+    {
+      "name": "forma.product.shelves.tramatv.name",
+      "price": "$54.700,00",
+      "oldPrice": "$65.700,00",
+      "showPrice": true,
+      "imageUrl": "assets/img/estanterias/forma_biblioteca_trama_210x220.jpg",
+      "fbLink": "https://www.facebook.com/commerce/products/1653505854715211/",
+      "showDetail": true,
+      "detail": {
+        "detailImages": [
+          "forma_biblioteca_trama_210x220_01.jpg",
+          "forma_biblioteca_trama_210x220_02.jpg"
+        ],
+        "measurements": "219 x 200 x 32 cm",
+        "description": "forma.product.shelves.tramatv.description"
+      }
+    },
+    {
+      "name": "forma.product.shelves.mesh.name",
+      "price": "$70.800,00",
+      "oldPrice": "$84.900,00",
+      "showPrice": true,
+      "imageUrl": "assets/img/estanterias/forma_estanterias_mesh_01.jpg",
+      "fbLink": "https://www.facebook.com/commerce/products/2117148211659432/",
+      "showDetail": true,
+      "detail": {
+        "detailImages": [
+          "forma_estanterias_mesh_02.jpg",
+          "forma_estanterias_mesh_03.jpg"
+        ],
+        "measurements": "220 x 200 x 43cm",
+        "description": "forma.product.shelves.mesh.description"
+      }
+    },
+    {
+      "name": "forma.product.shelves.shogun.name",
+      "price": "$50.000,00",
+      "oldPrice": "$60.200,00",
+      "showPrice": true,
+      "imageUrl": "assets/img/estanterias/forma_estanteria_shogun_200x200.jpg",
+      "fbLink": "https://www.facebook.com/commerce/products/2117148211659432/",
+      "showDetail": true,
+      "detail": {
+        "detailImages": [
+          "forma_estanteria_shogun_200x200.jpg",
+          "forma_estanteria_shogun_200x200_01.jpg"
+        ],
+        "measurements": "200 x 200 x 37 cm",
+        "description": "forma.product.shelves.shogun.description"
+      }
+    },
+    {
+      "name": "forma.product.shelves.trama1columna.name",
+      "price": "$33.750,00",
+      "oldPrice": "$40.500,00",
+      "showPrice": true,
+      "imageUrl": "assets/img/estanterias/forma_biblioteca_trama_137x200.jpg",
+      "fbLink": "https://www.facebook.com/commerce/products/1435081606619743/",
+      "showDetail": true,
+      "detail": {
+        "detailImages": [
+          "forma_biblioteca_trama_137x200.jpg",
+          "forma_biblioteca_trama_137x200_01.jpg"
+        ],
+        "measurements": "135 cm x 200 cm",
+        "description": "forma.product.shelves.trama1columna.description"
+      }
+    },
+    {
+      "name": "forma.product.shelves.shogun1columna.name",
+      "price": "$25.000,00",
+      "oldPrice": "$30.000,00"
+,      "showPrice": true,
+      "imageUrl": "assets/img/estanterias/forma_estanteria_shogun_una_columna.jpg",
+      "fbLink": "https://www.facebook.com/commerce/products/1688544164502339/",
+      "showDetail": true,
+      "detail": {
+        "detailImages": [
+          "forma_estanteria_shogun_una_columna.jpg"
+        ],
+        "measurements": "80 cm x 200 cm x 37 cm ",
+        "description": "forma.product.shelves.shogun1columna.description"
+      }
+    }
+  ]},
+  "kids": {
+    "title": "forma.product.kids",
+    "items": []
+  },
+  "bedrooms": {
+    "title": "forma.product.bedrooms",
+    "items": []
+  },
+  "chairs": {
+    "title": "forma.product.chairs",
+    "items": []
+  },
+  "armchair-sofas": {
+    "title": "forma.product.armchairs-sofas",
+    "items": []
+  },
+  "consoles": {
+    "title": "forma.product.consoles",
+    "items": []
+  }
+}
