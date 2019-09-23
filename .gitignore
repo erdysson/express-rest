@@ -1,4 +1,6 @@
 .idea
 express-rest.iml
 node_modules/
-**/*.js
+app/app-core/**/*.js
+lib/**/*.js
+
