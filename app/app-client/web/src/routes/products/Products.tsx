@@ -2,7 +2,7 @@ import React from 'react';
 import {Route, Link} from 'react-router-dom';
 import Product from "./product/Product";
 import TranslateService from '../../services/Translate.service';
-import {IProduct} from '../../../interfaces/interface';
+import {IItem, IProduct} from '../../../interfaces/interface';
 import './products.scss';
 
 interface Props {
@@ -27,7 +27,6 @@ class Products extends React.Component<Props, State> {
     }
 
     componentDidMount(): void {
-        console.log('products did mount');
         this.getProducts()
             .then((products: IProduct[]) => {
                 console.log('product config :', products);
@@ -57,6 +56,17 @@ class Products extends React.Component<Props, State> {
         });
     }
 
+    getProductItems(productName: string): IItem[] {
+        if (this.state.selectedProduct) {
+            return this.state.selectedProduct.items;
+        } else if (this.state.products.length) {
+            const mayBeProduct: IProduct = this.state.products.filter((product: IProduct) => product.name === productName)[0] || {};
+            return mayBeProduct.items || [];
+        } else {
+            return [];
+        }
+    }
+
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
         if (this.state.products.length === 0) {
             return null;
@@ -76,7 +86,7 @@ class Products extends React.Component<Props, State> {
                 </div>
                 <div className="route-product-content">
                     <Route path={`${this.props.match.path}/:productName`}
-                           render={() => <Product items={this.state.selectedProduct ? this.state.selectedProduct.items: []} />}
+                           render={(props) => <Product items={this.getProductItems(props.match.params.productName)} />}
                     />
                 </div>
             </div>
