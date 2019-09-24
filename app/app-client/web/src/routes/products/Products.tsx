@@ -35,7 +35,7 @@ class Products extends React.Component<Props, State> {
     }
 
     getProducts(): Promise<IProduct[]> {
-        return fetch('/product', {
+        return fetch('/config/product', {
             headers: {'Content-type': 'application/json'},
             method: 'POST',
             body: JSON.stringify({'branchCode': 'ES_AR'})

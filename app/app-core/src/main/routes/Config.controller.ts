@@ -11,15 +11,32 @@ class ConfigController {
     }
 
     @Authenticated()
-    @POST('/product')
+    @POST('/config/product')
     public getProductConfig(req: Request, res: Response): void {
         try {
             const branchCode: string = req.body.branchCode;
             this.ConfigProvider.getProductConfig(branchCode)
-                .then((translation: Record<string, string>) => res.json(translation))
+                .then((config: Record<string, any>) => res.json(config))
                 .catch((e) => {
                     console.log(e);
-                    res.sendStatus(500)
+                    res.sendStatus(500);
+                });
+
+        } catch (e) {
+            res.sendStatus(404);
+        }
+    }
+
+    @Authenticated()
+    @POST('/config/home')
+    public getHomeConfig(req: Request, res: Response): void {
+        try {
+            const branchCode: string = req.body.branchCode;
+            this.ConfigProvider.getHomeConfig(branchCode)
+                .then((config: Record<string, any>) => res.json(config))
+                .catch((e) => {
+                    console.log(e);
+                    res.sendStatus(500);
                 });
 
         } catch (e) {

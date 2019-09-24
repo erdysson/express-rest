@@ -1,33 +1,32 @@
-[
-    {
-        "ES_AR": {
-            "title": "home",
-            "items": [
-                {"image": "assets/img/inicio/r20.jpg", "link":"#/productos/mesas-bajas/torii/detail"},
-                {"image": "assets/img/inicio/r21.jpg", "link":"#/productos/mesas-bajas/torii/detail"},
-                {"image": "assets/img/inicio/r19.jpg", "link":"#/productos/escritorios/flot/detail"},
-                {"image": "assets/img/inicio/r18.jpg", "link":"#/productos/escritorios/flot/detail"},
-                {"image": "assets/img/inicio/16.jpg", "link":"#/productos/estanterias/biblioteca%20trama/detail"},
-                {"image": "assets/img/inicio/17.jpg", "link":"#/productos/estanterias/biblioteca%20trama/detail"},
-                {"image": "assets/img/inicio/15.jpg", "link":"#/productos/mesas/mesa%20flot/detail"},
-                {"image": "assets/img/inicio/14.jpg", "link":"#/productos/mesas/mesa%20flot/detail"},
-                {"image": "assets/img/inicio/12.jpg", "link":"#/productos/dormitorios/cama%20marcel%20160%20cm/detail"},
-                {"image": "assets/img/inicio/13.jpg", "link":"#/productos/dormitorios/cama%20marcel%20160%20cm/detail"},
-                {"image": "assets/img/inicio/01.jpg", "link":"#/productos/muebles-tv/f9/detail"}, 
-                {"image": "assets/img/inicio/03.jpg", "link":"#/productos/muebles-tv/f9/detail"},
-                {"image": "assets/img/inicio/02.jpg", "link":"#/nosotros"},
-                {"image": "assets/img/inicio/04.jpg", "link":"#/productos/mesas-bajas/we/detail"},
-                {"image": "assets/img/inicio/10.jpg", "link":"#/productos/sillones-sofas/sillon%20replica/detail"},
-                {"image": "assets/img/inicio/11.jpg", "link":"#/productos/sillones-sofas/sillon%20replica/detail"}
-        
-            ]
-        },
-        "ES_ES": {
-            "title": "home",
-            "items": [
-                {"image": "assets/img/inicio/r20.jpg", "link":"#/productos/mesas-bajas/torii/detail"},
-                {"image": "assets/img/inicio/r21.jpg", "link":"#/productos/mesas-bajas/torii/detail"}
-            ]
-        }
+{
+    "ES_AR": {
+        "items": [
+            {"image": "images/home/r20.jpg", "link":"/products/coffee-tables/torii/detail"},
+            {"image": "images/home/r21.jpg", "link":"/products/coffee-tables/torii/detail"},
+            {"image": "images/home/r19.jpg", "link":"/products/desks/flot/detail"},
+            {"image": "images/home/r18.jpg", "link":"/products/desks/flot/detail"},
+            {"image": "images/home/16.jpg", "link":"/products/shelves/biblioteca%20trama/detail"},
+            {"image": "images/home/17.jpg", "link":"/products/shelves/biblioteca%20trama/detail"},
+            {"image": "images/home/15.jpg", "link":"/products/tables/mesa%20flot/detail"},
+            {"image": "images/home/14.jpg", "link":"/products/tables/mesa%20flot/detail"},
+            {"image": "images/home/12.jpg", "link":"/products/bedrooms/cama%20marcel%20160%20cm/detail"},
+            {"image": "images/home/13.jpg", "link":"/products/bedrooms/cama%20marcel%20160%20cm/detail"},
+            {"image": "images/home/01.jpg", "link":"/products/tv-tables/f9/detail"},
+            {"image": "images/home/03.jpg", "link":"/products/tv-tables/f9/detail"},
+            {"image": "images/home/02.jpg", "link":"/about"},
+            {"image": "images/home/04.jpg", "link":"/products/coffee-tables/we/detail"},
+            {"image": "images/home/10.jpg", "link":"/products/sofas/sillon%20replica/detail"},
+            {"image": "images/home/11.jpg", "link":"/products/sofas/sillon%20replica/detail"}
+
+        ]
+    },
+    "ES_ES": {
+        "items": [
+            {"image": "images/home/r20.jpg", "link":"/products/coffee-tables/torii/detail"},
+            {"image": "images/home/r21.jpg", "link":"/products/coffee-tables/torii/detail"}
+        ]
+    },
+    "EN_US": {
+        "items": []
     }
-]
+}
