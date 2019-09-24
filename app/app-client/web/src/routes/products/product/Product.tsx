@@ -9,10 +9,6 @@ interface Props {
 
 class Product extends React.Component<Props> {
 
-    componentDidMount(): void {
-        console.log('Product component mount');
-    }
-
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
         return (
             <div className="route-product">
