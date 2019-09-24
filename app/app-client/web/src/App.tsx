@@ -5,48 +5,52 @@ import {library} from '@fortawesome/fontawesome-svg-core';
 import {fas} from '@fortawesome/free-solid-svg-icons';
 import {fab} from '@fortawesome/free-brands-svg-icons';
 import './styles/app.scss';
+import TranslateService from './services/Translate.service';
 
 library.add(fas, fab);
 
-const App: React.FC = () => {
+class App extends React.Component<{}, {translationsLoaded: boolean}> {
 
-    fetch('/product', {
-        headers: {
-            'Content-type': 'application/json'
-        },
-        method: 'POST',
-        body: JSON.stringify({
-            'branchCode': 'ES_AR'
+    constructor(props: any) {
+        super(props);
+
+        this.state = {
+            translationsLoaded: false
+        };
+    }
+
+    getTranslations(branchCode: string): Promise<Record<string, string>> {
+        return fetch(`/translation/${branchCode}`, {
+            headers: {'Content-type': 'application/json'},
+            method: 'GET'
         })
-    })
-    .then((res: any) => res.json())
-    .then((translations: Record<string, string>) => {
-        console.log('product config :', translations);
-    })
-    .catch((e: any) => {
-        console.log('product config request failed :', e);
-    });
+            .then((res: any) => res.json())
+            .catch((e: any) => {
+                console.log('translation request failed :', e);
+            });
+    }
 
-    fetch('/translation/ES_AR', {
-        headers: {
-            'Content-type': 'application/json'
-        },
-        method: 'GET'
-    })
-    .then((res: any) => res.json())
-    .then((translations: Record<string, string>) => {
-        console.log('translation :', translations);
-    })
-    .catch((e: any) => {
-        console.log('translation request failed :', e);
-    });
+    componentDidMount(): void {
+        this.getTranslations('ES_AR')
+            .then((translations: Record<string, string>) => {
+                console.log('translation :', translations);
+                TranslateService.init(translations);
+                this.setState({translationsLoaded: true});
+            });
+    }
 
-  return (
-    <div className="app">
-        <Routes />
-        <Footer />
-    </div>
-  );
-};
+    render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
+        if (!this.state.translationsLoaded) {
+            return null;
+        }
+
+        return (
+            <div className="app">
+                <Routes />
+                <Footer />
+            </div>
+        );
+    }
+}
 
 export default App;

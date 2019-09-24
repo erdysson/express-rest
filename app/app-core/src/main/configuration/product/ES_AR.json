@@ -4,6 +4,7 @@
       "title": "forma.product.tables",
       "items": [
         {
+          "id": 1,
           "name": "forma.product.table.quad.name",
           "price": "$47.900,00",
           "showPrice": true,
@@ -20,6 +21,7 @@
           }
         },
         {
+          "id": 2,
           "name": "forma.product.table.t.name",
           "price": "$47.900,00",
           "showPrice": true,
@@ -36,6 +38,7 @@
           }
         },
         {
+          "id": 3,
           "name": "forma.product.table.concorde.name",
           "price": "$65.900,00",
           "showPrice": true,
@@ -52,6 +55,7 @@
           }
         },
         {
+          "id": 4,
           "name": "forma.product.table.sen.name",
           "price": "$64.300,00",
           "showPrice": true,
@@ -68,6 +72,7 @@
           }
         },
         {
+          "id": 5,
           "name": "forma.product.table.flot.name",
           "price": "$54.300,00",
           "showPrice": true,
@@ -84,6 +89,7 @@
           }
         },
         {
+          "id": 6,
           "name": "forma.product.table.doblet.name",
           "price": "$54.700,00",
           "showPrice": true,
