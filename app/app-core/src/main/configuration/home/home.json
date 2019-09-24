@@ -1,29 +1,27 @@
 {
     "ES_AR": {
         "items": [
-            {"image": "images/home/r20.jpg", "link":"/products/coffee-tables/torii/detail"},
-            {"image": "images/home/r21.jpg", "link":"/products/coffee-tables/torii/detail"},
-            {"image": "images/home/r19.jpg", "link":"/products/desks/flot/detail"},
-            {"image": "images/home/r18.jpg", "link":"/products/desks/flot/detail"},
-            {"image": "images/home/16.jpg", "link":"/products/shelves/biblioteca%20trama/detail"},
-            {"image": "images/home/17.jpg", "link":"/products/shelves/biblioteca%20trama/detail"},
-            {"image": "images/home/15.jpg", "link":"/products/tables/mesa%20flot/detail"},
-            {"image": "images/home/14.jpg", "link":"/products/tables/mesa%20flot/detail"},
-            {"image": "images/home/12.jpg", "link":"/products/bedrooms/cama%20marcel%20160%20cm/detail"},
-            {"image": "images/home/13.jpg", "link":"/products/bedrooms/cama%20marcel%20160%20cm/detail"},
-            {"image": "images/home/01.jpg", "link":"/products/tv-tables/f9/detail"},
-            {"image": "images/home/03.jpg", "link":"/products/tv-tables/f9/detail"},
-            {"image": "images/home/02.jpg", "link":"/about"},
-            {"image": "images/home/04.jpg", "link":"/products/coffee-tables/we/detail"},
-            {"image": "images/home/10.jpg", "link":"/products/sofas/sillon%20replica/detail"},
-            {"image": "images/home/11.jpg", "link":"/products/sofas/sillon%20replica/detail"}
-
+            {"image": "images/home/r20.jpg", "type": "coffee-table", "productId":"coffee-table-tori"},
+            {"image": "images/home/r21.jpg", "type": "coffee-table", "productId":"coffee-table-tori"},
+            {"image": "images/home/r19.jpg", "type": "desk", "productId":"desk-flot"},
+            {"image": "images/home/r18.jpg", "type": "desk", "productId":"desk-flot"},
+            {"image": "images/home/16.jpg", "type": "shelf", "productId":"shelf-trama"},
+            {"image": "images/home/17.jpg", "type": "shelf", "productId":"shelf-trama"},
+            {"image": "images/home/15.jpg", "type": "table", "productId":"table-flot"},
+            {"image": "images/home/14.jpg", "type": "table", "productId":"table-flot"},
+            {"image": "images/home/12.jpg", "type": "bedroom", "productId":"bedroom-camastro-80"},
+            {"image": "images/home/13.jpg", "type": "bedroom", "productId":"bedroom-camastro-80"},
+            {"image": "images/home/01.jpg", "type": "tv-table", "productId":"tv-table-frame-f9"},
+            {"image": "images/home/03.jpg", "type": "tv-table", "productId":"tv-table-frame-f9"},
+            {"image": "images/home/04.jpg", "type": "coffee-table", "productId":"coffee-table-we"},
+            {"image": "images/home/10.jpg", "type": "sofa", "productId":"armchair-sofa-replica"},
+            {"image": "images/home/11.jpg", "type": "sofa", "productId":"armchair-sofa-replica"}
         ]
     },
     "ES_ES": {
         "items": [
-            {"image": "images/home/r20.jpg", "link":"/products/coffee-tables/torii/detail"},
-            {"image": "images/home/r21.jpg", "link":"/products/coffee-tables/torii/detail"}
+            {"image": "images/home/r20.jpg", "type": "coffee-table", "productId":"coffee-table-tori"},
+            {"image": "images/home/r21.jpg", "type": "coffee-table", "productId":"coffee-table-tori"}
         ]
     },
     "EN_US": {

@@ -27,10 +27,13 @@ class Products extends React.Component<Props, State> {
     }
 
     componentDidMount(): void {
+        console.log('products did mount');
         this.getProducts()
             .then((products: IProduct[]) => {
                 console.log('product config :', products);
-                this.setState({products: products});
+                this.setState({
+                    products: products
+                });
             });
     }
 
