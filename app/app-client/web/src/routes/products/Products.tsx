@@ -1,28 +1,40 @@
 import React from 'react';
 import {Route, Link} from 'react-router-dom';
 import Product from "./product/Product";
-import './products.scss';
 import TranslateService from '../../services/Translate.service';
+import {IProduct} from '../../../interfaces/interface';
+import './products.scss';
 
-class Products extends React.Component<{match: any}, {products: any[]}> {
+interface Props {
+    match: any;
+    products: IProduct[];
+}
 
-    constructor(props: any) {
+interface State {
+    products: IProduct[];
+    selectedProduct: IProduct | null;
+}
+
+class Products extends React.Component<Props, State> {
+
+    constructor(props: Props) {
         super(props);
 
         this.state = {
-            products: []
+            products: [],
+            selectedProduct: null
         };
     }
 
     componentDidMount(): void {
         this.getProducts()
-            .then((products: any[]) => {
+            .then((products: IProduct[]) => {
                 console.log('product config :', products);
                 this.setState({products: products});
             });
     }
 
-    getProducts(): Promise<any[]> {
+    getProducts(): Promise<IProduct[]> {
         return fetch('/product', {
             headers: {'Content-type': 'application/json'},
             method: 'POST',
@@ -35,6 +47,13 @@ class Products extends React.Component<{match: any}, {products: any[]}> {
             });
     }
 
+    onProductClick(product: IProduct): void {
+        this.setState({
+            products: this.state.products,
+            selectedProduct: product
+        });
+    }
+
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
         if (this.state.products.length === 0) {
             return null;
@@ -43,18 +62,18 @@ class Products extends React.Component<{match: any}, {products: any[]}> {
             <div className="route-products">
                 <div className="route-product-links-wrapper">
                     {
-                        this.state.products.map((product: any) =>
+                        this.state.products.map((product: IProduct) =>
                             (
-                                <div className="route-product-link" key={product.title}>
-                                    <Link to={`${this.props.match.url}/${product.title}`}>{TranslateService.translate(product.title)}</Link>
+                                <div className="route-product-link" key={product.name}>
+                                    <Link to={`${this.props.match.url}/${product.name}`} onClick={() => this.onProductClick(product)}>{TranslateService.translate(product.title)}</Link>
                                 </div>
                             )
                         )
                     }
                 </div>
                 <div className="route-product-content">
-                    <Route path={`${this.props.match.path}/:productId`}
-                           render={() => <Product items={this.state.products[1].items} />}
+                    <Route path={`${this.props.match.path}/:productName`}
+                           render={() => <Product items={this.state.selectedProduct ? this.state.selectedProduct.items: []} />}
                     />
                 </div>
             </div>

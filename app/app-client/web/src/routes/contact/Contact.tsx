@@ -5,7 +5,7 @@ const Contact: React.FC = () => {
     return (
         <div className="route-contact">
             <div className="location-img-wrapper">
-                <img className="location-img" src={'./images/forma-location.jpg'} alt={'location'} />
+                <img className="location-img" src={'/images/forma/forma-location.jpg'} alt={'location'} />
             </div>
             <div className="contact-wrapper">
                 <div className="col contact-detail">

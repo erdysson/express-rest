@@ -2,26 +2,27 @@
   "products": [
     {
       "title": "forma.product.tables",
+      "name": "tables",
       "items": [
         {
-          "id": 1,
+          "id": "table-quad",
           "name": "forma.product.table.quad.name",
           "price": "$47.900,00",
           "showPrice": true,
-          "imageUrl": "images/product/tables/forma_mesas_quad_01.jpg",
+          "imageUrl": "images/product/tables/forma_mesa_quad_01.jpg",
           "fbLink": "https://business.facebook.com/commerce/products/1422646407837337/",
           "showDetail": true,
           "details": {
             "images": [
-              "images/product/tables/forma_mesas_quad_02.jpg",
-              "images/product/tables/forma_mesas_quad_03.jpg"
+              "images/product/tables/forma_mesa_quad_02.jpg",
+              "images/product/tables/forma_mesa_quad_03.jpg"
             ],
             "measurements": "200 x 100 cm",
             "description": "forma.product.table.quad.description"
           }
         },
         {
-          "id": 2,
+          "id": "table-t",
           "name": "forma.product.table.t.name",
           "price": "$47.900,00",
           "showPrice": true,
@@ -30,7 +31,6 @@
           "showDetail": true,
           "details": {
             "images": [
-              "images/product/tables/forma_mesas_T_01.jpg",
               "images/product/tables/forma_mesas_T_02.jpg"
             ],
             "measurements": "200 x 100 cm",
@@ -38,7 +38,7 @@
           }
         },
         {
-          "id": 3,
+          "id": "table-concorde",
           "name": "forma.product.table.concorde.name",
           "price": "$65.900,00",
           "showPrice": true,
@@ -55,7 +55,7 @@
           }
         },
         {
-          "id": 4,
+          "id": "table-sen",
           "name": "forma.product.table.sen.name",
           "price": "$64.300,00",
           "showPrice": true,
@@ -72,7 +72,7 @@
           }
         },
         {
-          "id": 5,
+          "id": "table-flot",
           "name": "forma.product.table.flot.name",
           "price": "$54.300,00",
           "showPrice": true,
@@ -81,6 +81,7 @@
           "showDetail": true,
           "details": {
             "images": [
+              "images/product/tables/forma_mesas_Flot_02.jpg",
               "images/product/tables/forma_mesas_Flot_03.jpg",
               "images/product/tables/forma_mesas_Flot_04.jpg"
             ],
@@ -89,7 +90,7 @@
           }
         },
         {
-          "id": 6,
+          "id": "table-doblet",
           "name": "forma.product.table.doblet.name",
           "price": "$54.700,00",
           "showPrice": true,
@@ -106,6 +107,7 @@
           }
         },
         {
+          "id": "table-prisma",
           "name": "forma.product.table.prisma.name",
           "price": "$49.900,00",
           "oldPrice": "$69.240,00",
@@ -115,7 +117,6 @@
           "showDetail": true,
           "details": {
             "images": [
-              "images/product/tables/forma_mesa_prisma_200x100.jpg",
               "images/product/tables/forma_mesa_prisma_200x100_01.jpg"
             ],
             "measurements": "200 x 100 cm",
@@ -123,6 +124,7 @@
           }
         },
         {
+          "id": "table-classic",
           "name": "forma.product.table.classic.name",
           "price": "$41.600,00",
           "oldPrice": "$50.388,00",
@@ -140,6 +142,7 @@
           }
         },
         {
+          "id": "table-dressoir",
           "name": "forma.product.table.dressoir.name",
           "price": "$19.900,00",
           "oldPrice": "$24.900,00",
@@ -150,13 +153,15 @@
           "details": {
             "images": [
               "images/product/tables/forma_mesa_dressoir_02.jpg",
-              "images/product/tables/forma_mesa_dressoir_03.jpg"
+              "images/product/tables/forma_mesa_dressoir_03.jpg",
+              "images/product/tables/forma_mesa_dressoir_04.jpg"
             ],
             "measurements": "120 x 80 x 35cm ",
             "description": "forma.product.table.dressoir.description"
           }
         },
         {
+          "id": "table-dressoir-iron",
           "name": "forma.product.table.dressoir.iron.name",
           "price": "$19.900,00",
           "oldPrice": "$24.900,00",
@@ -177,103 +182,110 @@
     },
     {
       "title": "forma.product.coffeetables",
+      "name": "coffee-tables",
       "items": [
         {
+          "id": "coffee-table-iron",
           "name": "forma.product.coffeetable.iron.name",
           "price": "$18.900,00",
           "oldPrice": "$22.700,00",
           "showPrice": true,
-          "imageUrl": "images/product/tables-bajas/forma_mesas_bajas_iron_02.jpg",
+          "imageUrl": "/images/product/coffee-tables/forma_mesas_bajas_iron_02.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1939662362733743/",
           "showDetail": true,
           "details": {
             "images": [
-              "images/product/tables/forma_mesas_bajas_iron_01.jpg",
-              "images/product/tables/forma_mesas_bajas_iron_02.jpg"
+              "images/product/coffee-tables/forma_mesas_bajas_iron_01.jpg",
+              "images/product/coffee-tables/forma_mesas_bajas_iron_02.jpg"
             ],
             "measurements": "127 x 40 x 46 cm",
             "description": "forma.product.coffeetable.iron.description"
           }
         },
         {
+          "id": "coffee-table-damero",
           "name": "forma.product.coffeetable.damero.name",
           "price": "$30.600,00",
           "oldPrice": "$36.800,00",
           "showPrice": true,
-          "imageUrl": "images/product/tables-bajas/forma_mesas_bajas_damero_01.jpg",
+          "imageUrl": "images/product/coffee-tables/forma_mesas_bajas_damero_01.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1939662362733743/",
           "showDetail": true,
           "details": {
             "images": [
-              "images/product/tables/forma_mesas_bajas_damero_02.jpg",
-              "images/product/tables/forma_mesas_bajas_damero_03.jpg"
+              "images/product/coffee-tables/forma_mesas_bajas_damero_02.jpg",
+              "images/product/coffee-tables/forma_mesas_bajas_damero_03.jpg"
             ],
             "measurements": "120 x 60, 140 x 70 cm, 140 x 80 cm",
             "description": "forma.product.coffeetable.damero.description"
           }
         },
         {
+          "id": "coffee-table-tori",
           "name": "forma.product.coffeetable.torii.name",
           "price": "$19.900,00",
           "oldPrice": "$22.800,00",
           "showPrice": true,
-          "imageUrl": "images/product/tables-bajas/forma_mesa_centro_torii.jpg",
+          "imageUrl": "images/product/coffee-tables/forma_mesa_centro_torii.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1939662362733743/",
           "showDetail": true,
           "details": {
             "images": [
-              "images/product/tables/forma_mesa_centro_torii_02.jpg",
-              "images/product/tables/forma_mesa_centro_torii_03.jpg"
+              "images/product/coffee-tables/forma_mesa_centro_torii_02.jpg",
+              "images/product/coffee-tables/forma_mesa_centro_torii_03.jpg"
             ],
             "measurements": "120 x 60, 140 x 70 cm, 140 x 80 cm",
             "description": "forma.product.coffeetable.torii.description"
           }
         },
         {
+          "id": "coffee-table-we",
           "name": "forma.product.coffeetable.we.name",
           "price": "$19.900,00",
           "oldPrice": "$22.800,00",
           "showPrice": true,
-          "imageUrl": "images/product/tables-bajas/forma_mesa_centro_we.jpg",
+          "imageUrl": "images/product/coffee-tables/forma_mesa_centro_we.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1654691894580388/",
           "showDetail": true,
           "details": {
             "images": [
-              "images/product/tables/forma_mesa_centro_we_01.jpg",
-              "images/product/tables/forma_mesa_centro_we_03.jpg"
+              "images/product/coffee-tables/forma_mesa_centro_we_01.jpg",
+              "images/product/coffee-tables/forma_mesa_centro_we_03.jpg"
             ],
             "measurements": "180 x 60 cm",
             "description": "forma.product.coffeetable.we.description"
           }
         },
         {
+          "id": "coffee-table-wire",
           "name": "forma.product.coffeetable.wire.name",
           "price": "$19.900,00",
           "oldPrice": "$22.800,00",
           "showPrice": true,
-          "imageUrl": "images/product/tables-bajas/forma_mesa_centro_wire.jpg",
+          "imageUrl": "images/product/coffee-tables/forma_mesa_centro_wire.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1560748110713245/",
           "showDetail": true,
           "details": {
             "images": [
-              "images/product/tables/forma_mesa_centro_wire.jpg"
+              "images/product/coffee-tables/forma_mesa_centro_wire.jpg"
             ],
             "measurements": "120 x 60 cm",
             "description": "forma.product.coffeetable.wire.description"
           }
         },
         {
+          "id": "coffee-table-doblet",
           "name": "forma.product.coffeetable.doblet.name",
           "price": "$15.700,00",
           "oldPrice": "$18.900,00",
           "showPrice": true,
-          "imageUrl": "images/product/tables-bajas/forma_mesa_centro_doble_t.jpg",
+          "imageUrl": "images/product/coffee-tables/forma_mesa_centro_doble_t.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1606518182808352/",
           "showDetail": true,
           "details": {
             "images": [
-              "images/product/tables/forma_mesa_centro_doble_t_01.jpg",
-              "images/product/tables/forma_mesa_centro_doble_t_02.jpg"
+              "images/product/coffee-tables/forma_mesa_centro_doble_t_01.jpg",
+              "images/product/coffee-tables/forma_mesa_centro_doble_t_02.jpg"
             ],
             "measurements": "120 x 60 cm",
             "description": "forma.product.coffeetable.doblet.description"
@@ -283,13 +295,15 @@
     },
     {
       "title": "forma.product.tvtables",
+      "name": "tv-tables",
       "items": [
         {
+          "id": "tv-table-frame-e2pm",
           "name": "forma.product.tvtable.framee2pm.name",
           "price": "$56.950,00",
           "oldPrice": "$68.500,00",
           "showPrice": true,
-          "imageUrl": "assets/img/muebles-tv/forma_tv_frame_e2p_madera_01.jpg",
+          "imageUrl": "images/product/tv-tables/forma_tv_frame_e2p_madera_01.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1714513088603051/",
           "showDetail": true,
           "details": {
@@ -302,6 +316,7 @@
           }
         },
         {
+          "id": "tv-table-frame-2p",
           "name": "forma.product.tvtable.framee2p.name",
           "price": "$57.950,00",
           "oldPrice": "$69.500,00",
@@ -318,11 +333,12 @@
           }
         },
         {
+          "id": "tv-table-iron-192",
           "name": "forma.product.tvtable.iron192.name",
           "price": "$28.600,00",
           "oldPrice": "$34.400,00",
           "showPrice": true,
-          "imageUrl": "assets/img/muebles-tv/forma_muebletv_iron_192_01.jpg",
+          "imageUrl": "images/product/tv-tables/forma_muebletv_iron_192_01.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1714513088603051/",
           "showDetail": true,
           "details": {
@@ -335,11 +351,12 @@
           }
         },
         {
+          "id": "tv-table-iron-252",
           "name": "forma.product.tvtable.iron252.name",
           "price": "$46.800,00",
           "oldPrice": "$56.200,00",
           "showPrice": true,
-          "imageUrl": "assets/img/muebles-tv/forma_mueblestv_iron_253_01.jpg",
+          "imageUrl": "images/product/tv-tables/forma_mueblestv_iron_253_01.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1714513088603051/",
           "showDetail": true,
           "details": {
@@ -352,11 +369,12 @@
           }
         },
         {
+          "id": "tv-table-frame-e20b",
           "name": "forma.product.tvtable.framee20b.name",
           "price": "$56.900,00",
           "oldPrice": "$68.300,00",
           "showPrice": true,
-          "imageUrl": "assets/img/muebles-tv/forma_tv_e20_black_01.jpg",
+          "imageUrl": "images/product/tv-tables/forma_tv_e20_black_01.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1714513088603051/",
           "showDetail": true,
           "details": {
@@ -369,11 +387,12 @@
           }
         },
         {
+          "id": "tv-table-frame-e20",
           "name": "forma.product.tvtable.framee20.name",
           "price": "$56.900,00",
           "oldPrice": "$68.300,00",
           "showPrice": true,
-          "imageUrl": "assets/img/muebles-tv/forma_tv_e20_madera_01.jpg",
+          "imageUrl": "images/product/tv-tables/forma_tv_e20_madera_01.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1714513088603051/",
           "showDetail": true,
           "details": {
@@ -386,11 +405,12 @@
           }
         },
         {
+          "id": "tv-table-frame-e20l",
           "name": "forma.product.tvtable.framee20l.name",
           "price": "$43.500,00",
           "oldPrice": "$52.800,00",
           "showPrice": true,
-          "imageUrl": "assets/img/muebles-tv/forma_tv_e20_laca_01.jpg",
+          "imageUrl": "images/product/tv-tables/forma_tv_e20_laca_01.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1714513088603051/",
           "showDetail": true,
           "details": {
@@ -403,11 +423,12 @@
           }
         },
         {
+          "id": "tv-table-frame-f6b",
           "name": "forma.product.tvtable.framef6b.name",
           "price": "$47.200,00",
           "oldPrice": "$56.700,00",
           "showPrice": true,
-          "imageUrl": "assets/img/muebles-tv/forma_mueble_tv_f6_black_01.jpg",
+          "imageUrl": "images/product/tv-tables/forma_mueble_tv_f6_black_01.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1714513088603051/",
           "showDetail": true,
           "details": {
@@ -420,11 +441,12 @@
           }
         },
         {
+          "id": "tv-table-frame-f6",
           "name": "forma.product.tvtable.framef6.name",
           "price": "$47.200,00",
           "oldPrice": "$56.700,00",
           "showPrice": true,
-          "imageUrl": "assets/img/muebles-tv/forma_mueble_tv_f6_madera_01.jpg",
+          "imageUrl": "images/product/tv-tables/forma_mueble_tv_f6_madera_01.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1714513088603051/",
           "showDetail": true,
           "details": {
@@ -437,11 +459,12 @@
           }
         },
         {
+          "id": "tv-table-frame-f6l",
           "name": "forma.product.tvtable.framef6l.name",
           "price": "$43.900,00",
           "oldPrice": "$52.700,00",
           "showPrice": true,
-          "imageUrl": "assets/img/muebles-tv/forma_mueble_tv_f6_white_01.jpg",
+          "imageUrl": "images/product/tv-tables/forma_mueble_tv_f6_white_01.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1714513088603051/",
           "showDetail": true,
           "details": {
@@ -454,11 +477,12 @@
           }
         },
         {
+          "id": "tv-table-frame",
           "name": "forma.product.tvtable.frame.name",
           "price": "$29.200,00",
           "oldPrice": "$34.900,00",
           "showPrice": true,
-          "imageUrl": "assets/img/muebles-tv/forma_muebletv_bar.jpg",
+          "imageUrl": "images/product/tv-tables/forma_muebletv_bar.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1714513088603051/",
           "showDetail": true,
           "details": {
@@ -471,11 +495,12 @@
           }
         },
         {
+          "id": "tv-table-frame-f9",
           "name": "forma.product.tvtable.framef9.name",
           "price": "$33.200,00",
           "oldPrice": "$39.900,00",
           "showPrice": true,
-          "imageUrl": "assets/img/muebles-tv/forma_muebletv_f9.jpg",
+          "imageUrl": "images/product/tv-tables/forma_muebletv_f9.jpg",
           "fbLink": "https://business.facebook.com/commerce/products/1640099066079029/",
           "showDetail": true,
           "details": {
@@ -489,11 +514,12 @@
           }
         },
         {
+          "id": "tv-table-frame-01",
           "name": "forma.product.tvtable.frame01.name",
           "price": "$34.900,00",
           "oldPrice": "$41.100,00",
           "showPrice": true,
-          "imageUrl": "assets/img/muebles-tv/forma_muebletv_frame.jpg",
+          "imageUrl": "images/product/tv-tables/forma_muebletv_frame.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1652421028169895/",
           "showDetail": true,
           "details": {
@@ -505,11 +531,12 @@
           }
         },
         {
+          "id": "tv-table-frame-f6la",
           "name": "forma.product.tvtable.framef6la.name",
           "price": "$43.900,00",
           "oldPrice": "$52.700,00",
           "showPrice": true,
-          "imageUrl": "assets/img/muebles-tv/forma_muebletv_lack_p183_01.jpg",
+          "imageUrl": "images/product/tv-tables/forma_muebletv_lack_p183_01.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1414371648692321/",
           "showDetail": true,
           "details": {
@@ -522,11 +549,12 @@
           }
         },
         {
+          "id": "tv-table-frame-02",
           "name": "forma.product.tvtable.frame02.name",
           "price": "$39.900,00",
           "oldPrice": "$46.900,00",
           "showPrice": true,
-          "imageUrl": "assets/img/muebles-tv/forma_mueble_tv_frame_2_01.jpg",
+          "imageUrl": "images/product/tv-tables/forma_mueble_tv_frame_2_01.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1853764824697605/",
           "showDetail": true,
           "details": {
@@ -542,13 +570,15 @@
     },
     {
       "title": "forma.product.desks",
+      "name": "desks",
       "items": [
         {
+          "id": "desk-flot",
           "name": "forma.product.desks.flot.name",
           "price": "$31.200,00",
           "oldPrice": " $38.700,00",
           "showPrice": true,
-          "imageUrl": "assets/img/escritorios/forma_escritorio_flot_01.jpg",
+          "imageUrl": "images/product/desks/forma_escritorio_flot_01.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1921706494525097/",
           "showDetail": true,
           "details": {
@@ -561,11 +591,12 @@
           }
         },
         {
+          "id": "desk-city",
           "name": "forma.product.desks.city.name",
           "price": "$18.100,00",
           "oldPrice": " $21.500,00",
           "showPrice": true,
-          "imageUrl": "assets/img/escritorios/forma_escritorio_city_laca_02.jpg",
+          "imageUrl": "images/product/desks/forma_escritorio_city_laca_02.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1921706494525097/",
           "showDetail": true,
           "details": {
@@ -578,11 +609,12 @@
           }
         },
         {
+          "id": "desk-city-c153",
           "name": "forma.product.desks.cityc153.name",
           "price": "$31.600,00",
           "oldPrice": " $37.900,00",
           "showPrice": true,
-          "imageUrl": "assets/img/escritorios/forma_escritorios_citycajon_15.jpg",
+          "imageUrl": "images/product/desks/forma_escritorios_citycajon_15.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1921706494525097/",
           "showDetail": true,
           "details": {
@@ -598,13 +630,15 @@
     },
     {
       "title": "forma.product.shelves",
+      "name": "shelves",
       "items": [
         {
+          "id": "shelf-iron",
           "name": "forma.product.shelves.iron.name",
           "price": "$75.000,00",
           "oldPrice": "$90.600,00",
           "showPrice": false,
-          "imageUrl": "assets/img/estanterias/forma_estanterias_iron_01.jpg",
+          "imageUrl": "images/product/shelves/forma_estanterias_iron_01.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/2157051500978456/",
           "showDetail": true,
           "details": {
@@ -617,11 +651,12 @@
           }
         },
         {
+          "id": "shelf-iron-67",
           "name": "forma.product.shelves.iron67.name",
           "price": "$75.000,00",
           "oldPrice": "$90.600,00",
           "showPrice": false,
-          "imageUrl": "assets/img/estanterias/forma_estanterias_iron_01.jpg",
+          "imageUrl": "images/product/shelves/forma_estanterias_iron_01.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/2157051500978456/",
           "showDetail": true,
           "details": {
@@ -634,11 +669,12 @@
           }
         },
         {
+          "id": "shelf-trama",
           "name": "forma.product.shelves.trama.name",
           "price": "$61.120,00",
           "oldPrice": "$73.200,00",
           "showPrice": true,
-          "imageUrl": "assets/img/estanterias/forma_estanteria_modulor_01.jpg",
+          "imageUrl": "images/product/shelves/forma_estanteria_modulor_01.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/2157051500978456/",
           "showDetail": true,
           "details": {
@@ -651,11 +687,12 @@
           }
         },
         {
+          "id": "shelf-trama-tv",
           "name": "forma.product.shelves.tramatv.name",
           "price": "$54.700,00",
           "oldPrice": "$65.700,00",
           "showPrice": true,
-          "imageUrl": "assets/img/estanterias/forma_biblioteca_trama_210x220.jpg",
+          "imageUrl": "images/product/shelves/forma_biblioteca_trama_210x220.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1653505854715211/",
           "showDetail": true,
           "details": {
@@ -668,11 +705,12 @@
           }
         },
         {
+          "id": "shelf-mesh",
           "name": "forma.product.shelves.mesh.name",
           "price": "$70.800,00",
           "oldPrice": "$84.900,00",
           "showPrice": true,
-          "imageUrl": "assets/img/estanterias/forma_estanterias_mesh_01.jpg",
+          "imageUrl": "images/product/shelves/forma_estanterias_mesh_01.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/2117148211659432/",
           "showDetail": true,
           "details": {
@@ -685,11 +723,12 @@
           }
         },
         {
+          "id": "shelf-shogun",
           "name": "forma.product.shelves.shogun.name",
           "price": "$50.000,00",
           "oldPrice": "$60.200,00",
           "showPrice": true,
-          "imageUrl": "assets/img/estanterias/forma_estanteria_shogun_200x200.jpg",
+          "imageUrl": "images/product/shelves/forma_estanteria_shogun_200x200.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/2117148211659432/",
           "showDetail": true,
           "details": {
@@ -702,11 +741,12 @@
           }
         },
         {
+          "id": "shelf-trama-1-column-a",
           "name": "forma.product.shelves.trama1columna.name",
           "price": "$33.750,00",
           "oldPrice": "$40.500,00",
           "showPrice": true,
-          "imageUrl": "assets/img/estanterias/forma_biblioteca_trama_137x200.jpg",
+          "imageUrl": "images/product/shelves/forma_biblioteca_trama_137x200.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1435081606619743/",
           "showDetail": true,
           "details": {
@@ -719,11 +759,12 @@
           }
         },
         {
+          "id": "shelf-shogun-1-column-a",
           "name": "forma.product.shelves.shogun1columna.name",
           "price": "$25.000,00",
           "oldPrice": "$30.000,00",
           "showPrice": true,
-          "imageUrl": "assets/img/estanterias/forma_estanteria_shogun_una_columna.jpg",
+          "imageUrl": "images/product/shelves/forma_estanteria_shogun_una_columna.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1688544164502339/",
           "showDetail": true,
           "details": {
@@ -738,186 +779,198 @@
     },
     {
       "title": "forma.product.kids",
+      "name": "kids",
       "items": [
         {
+          "id": "kid-one-80",
           "name": "forma.product.kids.one80.name",
           "price": "$23.300,00",
           "oldPrice": "$27.800,00",
           "showPrice": true,
-          "imageUrl": "assets/img/kids/forma_kids_camas_01.jpg",
+          "imageUrl": "images/product/kids/forma_kids_camas_01.jpg",
           "showDetail": true,
           "details": {
             "images": [
-              "forma_kids_camas_02.jpg",
-              "forma_kids_camas_03.jpg"
+              "images/product/kids/forma_kids_camas_02.jpg",
+              "images/product/kids/forma_kids_camas_03.jpg"
             ],
             "measurements": "200 x 90 x 64 cm",
             "description": "forma.product.kids.one80.description"
           }
         },
         {
+          "id": "kid-divan",
           "name": "forma.product.kids.divan.name",
           "price": "$32.300,00",
           "oldPrice": "$38.900,00",
           "showPrice": true,
-          "imageUrl": "assets/img/kids/forma_kids_camas_divan_01.jpg",
+          "imageUrl": "images/product/kids/forma_kids_camas_divan_01.jpg",
           "showDetail": true,
           "details": {
             "images": [
-              "forma_kids_camas_divan_02.jpg",
-              "forma_kids_camas_divan_03.jpg"
+              "images/product/kids/forma_kids_camas_divan_02.jpg",
+              "images/product/kids/forma_kids_camas_divan_03.jpg"
             ],
             "measurements": "200 x 90 x 64 cm",
             "description": "forma.product.kids.divan.description"
           }
         },
         {
+          "id": "kid-camastro-80",
           "name": "forma.product.kids.camastro80.name",
           "price": "$21.500,00",
           "oldPrice": "$25.500,00",
           "showPrice": true,
-          "imageUrl": "assets/img/kids/forma_dormitorios_camastro_01.jpg",
+          "imageUrl": "images/product/kids/forma_dormitorios_camastro_01.jpg",
           "showDetail": true,
           "details": {
             "images": [
-              "forma_kids_camastro_02.jpg",
-              "forma_kids_camastro_03.jpg"
+              "images/product/kids/forma_kids_camastro_02.jpg",
+              "images/product/kids/forma_kids_camastro_03.jpg"
             ],
             "measurements": "200 x 92 x 67 cm",
             "description": "forma.product.kids.camastro80.description"
           }
         },
         {
+          "id": "kid-mesh",
           "name": "forma.product.kids.mesh.name",
           "price": "$56.400,00",
           "oldPrice": "$67.700,00",
           "showPrice": true,
-          "imageUrl": "assets/img/kids/forma_estanteria_mesh_01.jpg",
+          "imageUrl": "images/product/kids/forma_estanteria_mesh_01.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/2032923826725484/",
           "showDetail": true,
           "details": {
             "images": [
-              "forma_estanteria_mesh_02.jpg",
-              "forma_estanteria_mesh_04.jpg"
+              "images/product/kids/forma_estanteria_mesh_02.jpg",
+              "images/product/kids/forma_estanteria_mesh_04.jpg"
             ],
             "measurements": "167 x 200 x 39 cm" ,
             "description": "forma.product.kids.mesh.description"
           }
         },
         {
+          "id": "kid-frame-abierto",
           "name": "forma.product.kids.frameabierto.name",
           "price": "$29.900,00",
           "oldPrice": "$34.900,00",
           "showPrice": true,
-          "imageUrl": "assets/img/kids/forma_kids_frame_01.jpg",
+          "imageUrl": "images/product/kids/forma_kids_frame_01.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/2032923826725484/",
           "showDetail": true,
           "details": {
             "images": [
-              "forma_kids_frame_02.jpg",
-              "forma_kids_frame_03.jpg"
+              "images/product/kids/forma_kids_frame_02.jpg",
+              "images/product/kids/forma_kids_frame_03.jpg"
             ],
             "measurements": "196 x 59 x 43 cm prof" ,
             "description": "forma.product.kids.frameabierto.description"
           }
         },
         {
+          "id": "kid-frame-01",
           "name": "forma.product.kids.frame01.name",
           "price": "$34.900,00",
           "oldPrice": "$41.120",
           "showPrice": true,
-          "imageUrl": "assets/img/kids/forma_kids_frame_2_01.jpg",
+          "imageUrl": "images/product/kids/forma_kids_frame_2_01.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/2032923826725484/",
           "showDetail": true,
           "details": {
             "images": [
-              "forma_kids_frame_2_01.jpg",
-              "forma_kids_frame_2_02.jpg"
+              "images/product/kids/forma_kids_frame_2_01.jpg",
+              "images/product/kids/forma_kids_frame_2_02.jpg"
             ],
             "measurements": "196 x 59 x 43 cm prof" ,
             "description": "forma.product.kids.frame01.description"
           }
         },
         {
+          "id": "kid-frame-04",
           "name": "forma.product.kids.frame04.name",
           "price": "$36.900,00",
           "oldPrice": "$44.280,00",
           "showPrice": true,
-          "imageUrl": "assets/img/kids/forma_kids_frame_4_01.jpg",
+          "imageUrl": "images/product/kids/forma_kids_frame_4_01.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/2032923826725484/",
           "showDetail": true,
           "details": {
             "images": [
-              "forma_kids_frame_4_01.jpg",
-              "forma_kids_frame_4_02.jpg"
+              "images/product/kids/forma_kids_frame_4_01.jpg",
+              "images/product/kids/forma_kids_frame_4_02.jpg"
             ],
             "measurements": "196 x 59 x 43 cm prof" ,
             "description": "forma.product.kids.frame04.descriptio"
           }
         },
         {
+          "id": "kid-frame-06",
           "name": "forma.product.kids.frame06.name",
           "price": "$15.800,00",
           "oldPrice": "$18,900,00",
           "showPrice": true,
-          "imageUrl": "assets/img/kids/forma_kids_frame_6_01.jpg",
+          "imageUrl": "images/product/kids/forma_kids_frame_6_01.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/2032923826725484/",
           "showDetail": true,
           "details": {
             "images": [
-              "forma_kids_frame_6_01.jpg",
-              "forma_kids_frame_6_02.jpg"
+              "images/product/kids/forma_kids_frame_6_01.jpg",
+              "images/product/kids/forma_kids_frame_6_02.jpg"
             ],
             "measurements": "49 x 59 x 43 cm prof" ,
             "description": "forma.product.kids.frame06.description"
           }
         },
         {
+          "id": "kid-city-93",
           "name": "forma.product.kids.cityc93.name",
           "price": "$27.600,00",
           "oldPrice": "$33.100,00",
           "showPrice": true,
-          "imageUrl": "assets/img/kids/forma_escritorios_citycajon_11.jpg",
+          "imageUrl": "images/product/kids/forma_escritorios_citycajon_11.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/2032923826725484/",
           "showDetail": true,
           "details": {
             "images": [
-              "forma_escritorios_citycajon_12.jpg",
-              "forma_escritorios_citycajon_14.jpg"
+              "images/product/kids/forma_escritorios_citycajon_12.jpg",
+              "images/product/kids/forma_escritorios_citycajon_14.jpg"
             ],
             "measurements": "93 x 75 x 53 cm prof" ,
             "description": "forma.product.kids.cityc93.description"
           }
         },
         {
+          "id": "kid-city-c-123",
           "name": "forma.product.kids.cityc123.name",
           "price": "$30.100,00",
           "oldPrice": "$36.100,00",
           "showPrice": true,
-          "imageUrl": "assets/img/kids/forma_escritorios_citycajon_06.jpg",
+          "imageUrl": "images/product/kids/forma_escritorios_citycajon_06.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/2032923826725484/",
           "showDetail": true,
           "details": {
             "images": [
-              "forma_escritorios_citycajon_04.jpg",
-              "forma_escritorios_citycajon_05.jpg"
+              "images/product/kids/forma_escritorios_citycajon_04.jpg",
+              "images/product/kids/forma_escritorios_citycajon_05.jpg"
             ],
             "measurements": "123 x 75 x 53 cm prof" ,
             "description": "forma.product.kids.cityc123.description"
           }
         },
         {
+          "id": "kid-city-c-153",
           "name": "forma.product.kids.cityc153.name",
           "price": "$30.100,00",
           "oldPrice": "$36.100,00",
           "showPrice": true,
-          "imageUrl": "assets/img/kids/forma_escritorios_citycajon_08.jpg",
+          "imageUrl": "images/product/kids/forma_escritorios_citycajon_08.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/2032923826725484/",
           "showDetail": true,
           "details": {
             "images": [
-              "forma_escritorios_citycajon_09.jpg",
-              "forma_escritorios_citycajon_01.jpg"
+              "images/product/kids/forma_escritorios_citycajon_09.jpg",
+              "images/product/kids/forma_escritorios_citycajon_01.jpg"
             ],
             "measurements": "153 x 75 x 53 cm prof" ,
             "description": "forma.product.kids.cityc153.description"
@@ -927,158 +980,164 @@
     },
     {
       "title": "forma.product.bedrooms",
+      "name": "bedrooms",
       "items":[
         {
+          "id": "bedroom-otto-180",
           "name": "forma.product.bedrooms.otto180.name",
           "price": "$46.700,00",
           "oldPrice": "$54.900,00",
           "showPrice": true,
-          "imageUrl": "assets/img/dormitorios/forma_cama_otto_180.jpg",
+          "imageUrl": "images/product/bedrooms/forma_cama_otto_180.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1574788972617959/",
           "showDetail": true,
           "details": {
             "images": [
-              "forma_cama_otto_180.jpg",
-              "forma_cama_otto_180_01.jpg",
-              "forma_cama_otto_180_02.jpg"
+              "images/product/bedrooms/forma_cama_otto_180_01.jpg",
+              "images/product/bedrooms/forma_cama_otto_180_02.jpg"
             ],
             "measurements": "Para Colchón 180 cm x 190 cm",
             "description": "forma.product.bedrooms.otto180.description"
           }
         },
         {
+          "id": "bedroom-olivia-180",
           "name": "forma.product.bedrooms.olivia180.name",
           "price": "$46.700,00",
           "oldPrice": "$54.900,00",
           "showPrice": true,
-          "imageUrl": "assets/img/dormitorios/forma_cama_olivia_180.jpg",
+          "imageUrl": "images/product/bedrooms/forma_cama_olivia_180.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1664723360257266/",
           "showDetail": true,
           "details": {
             "images": [
-              "forma_cama_olivia_180_01.jpg",
-              "forma_cama_olivia_180_02.jpg"
+              "images/product/bedrooms/forma_cama_olivia_180_01.jpg",
+              "images/product/bedrooms/forma_cama_olivia_180_02.jpg"
             ],
             "measurements": "Para Colchón 180 cm x 190 cm",
             "description": "forma.product.bedrooms.olivia180.description"
           }
         },
         {
+          "id": "bedroom-otto-160",
           "name": "forma.product.bedrooms.otto160.name",
           "price": "$35.900,00",
           "oldPrice": "$43.100,00",
           "showPrice": true,
-          "imageUrl": "assets/img/dormitorios/forma_cama_otto_sin_cabecera.jpg",
+          "imageUrl": "images/product/bedrooms/forma_cama_otto_sin_cabecera.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1626436634144586/",
           "showDetail": true,
           "details": {
             "images": [
-              "forma_cama_otto_sin_cabecera.jpg",
-              "forma_cama_otto_sin_cabecera_01.jpg"
+              "images/product/bedrooms/forma_cama_otto_sin_cabecera.jpg",
+              "images/product/bedrooms/forma_cama_otto_sin_cabecera_01.jpg"
             ],
             "measurements": "Para Colchón 140 cm x 190 cm",
             "description": "forma.product.bedrooms.otto160.description"
           }
         },
         {
+          "id": "bedroom-camastro-80",
           "name": "forma.product.bedrooms.camastro80.name",
           "price": "$21.500,00",
           "oldPrice": "$25.500,00",
           "showPrice": true,
-          "imageUrl": "assets/img/sillones-sofas/forma_dormitorios_camastro_01.jpg",
+          "imageUrl": "images/product/bedrooms/forma_dormitorios_camastro_01.jpg",
           "fbLink": "https://business.facebook.com/commerce/products/1617896544988304/",
           "showDetail": true,
           "details": {
             "images": [
-              "forma_camastro_01.jpg",
-              "forma_camastro_02.jpg",
-              "forma_camastro_03.jpg"
+              "images/product/bedrooms/forma_camastro_02.jpg",
+              "images/product/bedrooms/forma_camastro_03.jpg"
             ],
             "measurements": "200 x 92 x 67cm",
             "description": "forma.product.bedrooms.camastro80.description"
           }
         },
         {
+          "id": "bedroom-mesadeluziron",
           "name": "forma.product.bedrooms.mesadeluziron.name",
           "price": "$15.900,00",
           "oldPrice": "$20.200,00",
           "showPrice": true,
-          "imageUrl": "assets/img/dormitorios/forma_mesas_luz_iron_01.jpg",
+          "imageUrl": "images/product/bedrooms/forma_mesas_luz_iron_01.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1704180996317393/",
           "showDetail": true,
           "details": {
             "images": [
-              "forma_mesas_luz_iron_02.jpg",
-              "forma_mesas_luz_iron_03.jpg"
+              "images/product/bedrooms/forma_mesas_luz_iron_02.jpg",
+              "images/product/bedrooms/forma_mesas_luz_iron_03.jpg"
             ],
             "measurements": "46 cm x 43 cm x 56 cm",
             "description": "forma.product.bedrooms.mesadeluziron.description"
           }
         },
         {
+          "id": "bedroom-mesadeluzone",
           "name": "forma.product.bedrooms.mesadeluzone.name",
           "price": "$15.900,00",
           "oldPrice": "$20.200,00",
           "showPrice": true,
-          "imageUrl": "assets/img/dormitorios/forma_mesa_de_luz_one.jpg",
+          "imageUrl": "images/product/bedrooms/forma_mesa_de_luz_one.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1704180996317393/",
           "showDetail": true,
           "details": {
             "images": [
-              "forma_mesa_de_luz_one.jpg",
-              "forma_mesa_de_luz_one_01.jpg"
+              "images/product/bedrooms/forma_mesa_de_luz_one.jpg",
+              "images/product/bedrooms/forma_mesa_de_luz_one_01.jpg"
             ],
             "measurements": "43 cm x 43 cm x 57 cm",
             "description": "forma.product.bedrooms.mesadeluzone.description"
           }
         },
         {
+          "id": "bedroom-mesadeluze-12",
           "name": "forma.product.bedrooms.mesadeluze12.name",
           "price": "$18.800,00",
           "oldPrice": "$20.960,00",
           "showPrice": true,
-          "imageUrl": "assets/img/dormitorios/forma_mesa_de_luz_e12.jpg",
+          "imageUrl": "images/product/bedrooms/forma_mesa_de_luz_e12.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1948097378566093/",
           "showDetail": true,
           "details": {
             "images": [
-              "forma_mesa_de_luz_e12.jpg",
-              "forma_mesa_de_luz_e12_01.jpg",
-              "forma_mesa_de_luz_e12_02.jpg"
+              "images/product/bedrooms/forma_mesa_de_luz_e12_01.jpg",
+              "images/product/bedrooms/forma_mesa_de_luz_e12_02.jpg"
             ],
             "measurements": "63 cm x 43 cm x 48 cm",
             "description": "forma.product.bedrooms.mesadeluze12.description"
           }
         },
         {
+          "id": "bedroom-mesadeluze-14",
           "name": "forma.product.bedrooms.mesadeluze14.name",
           "price": "$19.800,00",
           "oldPrice": "$23.900,00",
           "showPrice": true,
-          "imageUrl": "assets/img/dormitorios/forma_mesa_de_luz_e14.jpg",
+          "imageUrl": "images/product/bedrooms/forma_mesa_de_luz_e14.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1580198482096848/",
           "showDetail": true,
           "details": {
             "images": [
-              "forma_mesa_de_luz_e14.jpg",
-              "forma_mesa_de_luz_e14_01.jpg"
+              "images/product/bedrooms/forma_mesa_de_luz_e14.jpg",
+              "images/product/bedrooms/forma_mesa_de_luz_e14_01.jpg"
             ],
             "measurements": "94 cm x 43 cm x 48 cm",
             "description": "forma.product.bedrooms.mesadeluze14.description"
           }
         },
         {
+          "id": "bedroom-comodaf-5",
           "name": "forma.product.bedrooms.comodaf5.name",
           "price": "$41.300,00",
           "oldPrice": "$49.550,00",
           "showPrice": true,
-          "imageUrl": "assets/img/dormitorios/forma_comoda_f5.jpg",
+          "imageUrl": "images/product/bedrooms/forma_comoda_f5.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1525008774294566/",
           "showDetail": true,
           "details": {
             "images": [
-              "forma_comoda_f5.jpg",
-              "forma_comoda_f5_01.jpg"
+              "images/product/bedrooms/forma_comoda_f5_01.jpg"
             ],
             "measurements": "123 x 43 x 78 cm",
             "description": "forma.product.bedrooms.comodaf5.description"
@@ -1088,54 +1147,57 @@
     },
     {
       "title": "forma.product.chairs",
+      "name": "chairs",
       "items": [
         {
+          "id": "chair-tango",
           "name": "forma.product.chairs.tango.name",
           "price": "$9.900,00",
           "oldPrice": "$11.300,00",
           "showPrice": true,
-          "imageUrl": "assets/img/sillas/forma_sillas_tango _01.jpg",
+          "imageUrl": "images/product/chairs/forma_sillas_tango_01.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/2354784511214224/",
           "showDetail": true,
           "details": {
             "images": [
-              "forma_silla_tango_sin_apoyabrazos.jpg",
-              "forma_silla_tango_sin_apoyabrazos_01.jpg"
+              "images/product/chairs/forma_silla_tango_sin_apoyabrazos.jpg",
+              "images/product/chairs/forma_silla_tango_sin_apoyabrazos_01.jpg"
             ],
             "measurements": "46 x 53 x 82 cm",
             "description": "forma.product.chairs.tango.description"
           }
         },
         {
+          "id": "chair-tango-apoyabrazos",
           "name": "forma.product.chairs.tangoapoyabrazos.name",
           "price": "$11.000,00",
           "oldPrice": "$13.250,00",
           "showPrice": true,
-          "imageUrl": "assets/img/sillas/forma_sillas_tango _brazo_01.jpg",
+          "imageUrl": "images/product/chairs/forma_sillas_tango_brazo_01.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1921487807922031/",
           "showDetail": true,
           "details": {
             "images": [
-              "forma_silla_tango_con_apoyabrazos.jpg",
-              "forma_silla_tango_con_apoyabrazos_01.jpg"
+              "images/product/chairs/forma_silla_tango_con_apoyabrazos.jpg",
+              "images/product/chairs/forma_silla_tango_con_apoyabrazos_01.jpg"
             ],
             "measurements": "52 x 53 x 82 cm",
             "description": "forma.product.chairs.tangoapoyabrazos.description"
           }
         },
         {
+          "id": "chair-banquetatango",
           "name": "forma.product.chairs.banquetatango.name",
           "price": "$8.800,00",
           "oldPrice": "$10.900,00",
           "showPrice": true,
-          "imageUrl": "assets/img/sillas/forma_banqueta_tango_01.jpg",
+          "imageUrl": "images/product/chairs/forma_banqueta_tango_01.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1986111074733903/",
           "showDetail": true,
           "details": {
             "images": [
-              "forma_banqueta_tango_01.jpg",
-              "forma_banqueta_tango_02.jpg",
-              "forma_banqueta_tango_03.jpg"
+              "images/product/chairs/forma_banqueta_tango_02.jpg",
+              "images/product/chairs/forma_banqueta_tango_03.jpg"
             ],
             "measurements": "Asiento 70 cm.",
             "description": "forma.product.chairs.banquetatango.description"
@@ -1145,118 +1207,126 @@
     },
     {
       "title": "forma.product.armchairs-sofas",
+      "name": "armchair-sofas",
       "items": [
         {
+          "id": "armchair-sofa-phantom",
           "name": "forma.product.armchairs-sofas.phantom.name",
           "price": "$26.800,00",
           "oldPrice": "$32.200,00",
           "showPrice": true,
-          "imageUrl": "assets/img/sillones-sofas/forma_sofa_phantom_110.jpg",
+          "imageUrl": "images/product/sofas/forma_sofa_phantom_110.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1744222768963642/",
           "showDetail": true,
           "details": {
             "images": [
-              "forma_sofa_phantom_110.jpg"
+              "images/product/sofas/forma_sofa_phantom_110.jpg"
             ],
             "measurements": "110 cm x 90 cm",
             "description": "forma.product.armchairs-sofas.phantom.description"
           }
         },
         {
+          "id": "armchair-sofa-cubo",
           "name": "forma.product.armchairs-sofas.cubo.name",
           "price": "$40.600,00",
           "oldPrice": "$48.700,00",
           "showPrice": true,
-          "imageUrl": "assets/img/sillones-sofas/forma_sofa_cubo_160X90.jpg",
+          "imageUrl": "images/product/sofas/forma_sofa_cubo_160X90.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1272435509522901/",
           "showDetail": true,
           "details": {
             "images": [
-              "forma_sofa_cubo_160X90.jpg",
-              "forma_sofa_cubo_160X90_01.jpg"
+              "images/product/sofas/forma_sofa_cubo_160X90.jpg",
+              "images/product/sofas/forma_sofa_cubo_160X90_01.jpg"
             ],
             "measurements": "160 cm x 90 cm",
             "description": "forma.product.armchairs-sofas.cubo.description"
           }
         },
         {
+          "id": "armchair-sofa-c40",
           "name": "forma.product.armchairs-sofas.c40.name",
           "price": "$53.200,00",
           "oldPrice": "$63.900,00",
           "showPrice": true,
-          "imageUrl": "assets/img/sillones-sofas/forma_sofa_c40.jpg",
+          "imageUrl": "images/product/sofas/forma_sofa_c40.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1787596431288185/",
           "showDetail": true,
           "details": {
             "images": [
-              "forma_sofa_c40.jpg",
-              "forma_sofa_c-40_01.jpg"
+              "images/product/sofas/forma_sofa_c40.jpg",
+              "images/product/sofas/forma_sofa_c-40_01.jpg"
             ],
             "measurements": "240 cm x 90 cm",
             "description": "forma.product.armchairs-sofas.c40.description"
           }
         },
         {
+          "id": "armchair-sofa-g",
           "name": "forma.product.armchairs-sofas.g.name",
           "price": "$48.300,00",
           "oldPrice": "$57.900,00",
           "showPrice": true,
-          "imageUrl": "assets/img/sillones-sofas/forma_sofa_G_01.jpg",
+          "imageUrl": "images/product/sofas/forma_sofa_G_01.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/2554078114618430/",
           "showDetail": true,
           "details": {
             "images": [
-              "forma_sofa_G_01.jpg"
+              "images/product/sofas/forma_sofa_G_01.jpg"
             ],
             "measurements": "160 cm x 90 cm",
             "description": "forma.product.armchairs-sofas.g.description"
           }
         },
         {
+          "id": "armchair-sofa-camastro-80",
           "name": "forma.product.armchairs-sofas.camastro80.name",
           "price": "$39.990,00",
           "oldPrice": "$47.928,00",
           "showPrice": true,
-          "imageUrl": "assets/img/sillones-sofas/forma_dormitorios_camastro_01.jpg",
+          "imageUrl": "images/product/sofas/forma_dormitorios_camastro_01.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/2032923826725484/",
           "showDetail": true,
           "details": {
             "images": [
-              "forma_dormitorios_camastro_05.jpg",
-              "forma_dormitorios_camastro_04.jpg"
+              "images/product/sofas/forma_dormitorios_camastro_05.jpg",
+              "images/product/sofas/forma_dormitorios_camastro_04.jpg"
             ],
             "measurements": "200 x 92 x 67 cm",
             "description": "forma.product.armchairs-sofas.camastro80.description"
           }
         },
         {
+          "id": "armchair-sofa-okinawa",
           "name": "forma.product.armchairs-sofas.okinawa.name",
           "price": "$26.100,00",
           "oldPrice": "$31.300,00",
           "showPrice": true,
-          "imageUrl": "assets/img/sillones-sofas/forma_sillon_okinawa.jpg",
+          "imageUrl": "images/product/sofas/forma_sillon_okinawa.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1711409855587176/",
           "showDetail": true,
           "details": {
             "images": [
-              "forma_sillon_okinawa.jpg"
+              "images/product/sofas/forma_sillon_okinawa.jpg"
             ],
             "measurements": "77 x 77 x 80 cm",
             "description": "forma.product.armchairs-sofas.okinawa.description"
           }
         },
         {
+          "id": "armchair-sofa-replica",
           "name": "forma.product.armchairs-sofas.replica.name",
           "price": "$26.100,00",
           "oldPrice": "$31.300,00",
           "showPrice": true,
-          "imageUrl": "assets/img/sillones-sofas/forma_sillon_replica.jpg",
+          "imageUrl": "images/product/sofas/forma_sillon_replica.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1668048269908523/",
           "showDetail": true,
           "details": {
             "images": [
-              "forma_sillon_replica.jpg",
-              "forma_sillon_replica_01.jpg"
+              "images/product/sofas/forma_sillon_replica.jpg",
+              "images/product/sofas/forma_sillon_replica_01.jpg"
             ],
             "measurements": "77 x 77 x 80 cm",
             "description": "forma.product.armchairs-sofas.replica.description"
@@ -1266,36 +1336,39 @@
     },
     {
       "title": "forma.product.consoles",
+      "name": "consoles",
       "items": [
         {
+          "id": "console-frame",
           "name": "forma.product.consoles.frame.name",
           "price": "$77.200,00",
           "oldPrice": "$92.600,00",
           "showPrice": true,
-          "imageUrl": "assets/img/vajilleros/forma_vajilleros_frame_2e15_01.jpg",
+          "imageUrl": "images/product/consoles/forma_vajilleros_frame_2e15_01.jpg",
           "fbLink": "https://business.facebook.com/commerce/products/1278165862286492/",
           "showDetail": true,
           "details": {
             "images": [
-              "forma_vajilleros_frame_2e15_02.jpg",
-              "forma_vajilleros_frame_2e15_03.jpg"
+              "images/product/consoles/forma_vajilleros_frame_2e15_02.jpg",
+              "images/product/consoles/forma_vajilleros_frame_2e15_03.jpg"
             ],
             "measurements": "257 x 80 x 43 cm",
             "description": "forma.product.consoles.frame.description"
           }
         },
         {
+          "id": "console-v4",
           "name": "forma.product.consoles.v4.name",
           "price": "$51.600,00",
           "oldPrice": "$61.900,00",
           "showPrice": false,
-          "imageUrl": "assets/img/vajilleros/forma_vajillero_4_01.jpg",
+          "imageUrl": "images/product/consoles/forma_vajillero_4_01.jpg",
           "fbLink": "https://www.facebook.com/commerce/products/1715279955196014/",
           "showDetail": true,
           "details": {
             "images": [
-              "forma_vajillero_4_02.jpg",
-              "forma_vajillero_4_03.jpg"
+              "images/product/consoles/forma_vajillero_4_02.jpg",
+              "images/product/consoles/forma_vajillero_4_03.jpg"
             ],
             "measurements": "280 x 73 x 43 cm",
             "description": "forma.product.consoles.v4.description"

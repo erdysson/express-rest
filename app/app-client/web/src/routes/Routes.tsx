@@ -17,7 +17,7 @@ class Routes extends React.Component {
                     <div className="route-links">
                         <div className="logo">
                             <Link to="/">
-                                <img src={'./images/forma-logo.jpg'} alt={'forma'} />
+                                <img src={'/images/forma/forma-logo.jpg'} alt={'forma'} />
                             </Link>
                         </div>
                         <div className="route-links-wrapper">

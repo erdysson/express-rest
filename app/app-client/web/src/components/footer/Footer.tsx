@@ -59,7 +59,7 @@ class Footer extends React.Component {
                         <div className="fb-like" data-href="https://www.facebook.com/Forma.palermo" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
                     </div>
                     <div className="footer-col logo-abbr">
-                        <img className="forma-logo-abbr" src="./images/forma-logo-abbr.png" width="61" alt="forma" />
+                        <img className="forma-logo-abbr" src="/images/forma/forma-logo-abbr.png" width="61" alt="forma" />
                     </div>
                 </div>
             </div>

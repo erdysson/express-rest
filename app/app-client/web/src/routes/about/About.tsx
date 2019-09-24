@@ -5,7 +5,7 @@ const About: React.FC = () => {
     return (
         <div className="route-about">
             <div className="img-wrapper">
-                <img src="./images/about-us.jpg" alt="about us" />
+                <img src="/images/forma/about-us.jpg" alt="about us" />
             </div>
             <div className="desc-wrapper">
                 <p className="desc">

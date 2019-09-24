@@ -1,26 +1,19 @@
 import React from 'react';
 import './product.scss';
+import {IItem} from '../../../../interfaces/interface';
+import Item from '../../../components/product/item/Item';
 
-class Product extends React.Component<{items: any[]}> {
+interface Props {
+    items: IItem[];
+}
 
-    constructor(props: any) {
-        super(props);
-    }
-
-    componentDidMount(): void {
-        console.log('props :', this.props);
-    }
+class Product extends React.Component<Props> {
 
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
-        if (!this.props.items) {
-            return null;
-        }
         return (
             <div className="route-product">
                 {
-                    this.props.items.map((item: any) => {
-                        return (<div key={item.name}>{JSON.stringify(item)}</div>);
-                    })
+                    this.props.items.map((item: IItem) => (<Item key={item.id} item={item} />))
                 }
             </div>
         );
