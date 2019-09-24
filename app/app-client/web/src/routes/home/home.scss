@@ -1,5 +1,23 @@
 .route-home {
     display: flex;
+    flex-direction: row;
     flex-grow: 1;
     flex-shrink: 1;
+    flex-wrap: wrap;
+
+    .home-item-wrapper {
+        cursor: pointer;
+        display: flex;
+        padding: 10px;
+        width: 50%;
+
+        .home-item {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            display: flex;
+            padding-top: 100%;
+            width: 100%;
+        }
+    }
 }

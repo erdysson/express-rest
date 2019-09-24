@@ -44,8 +44,8 @@ class Home extends React.Component<{}, State> {
             <div className="route-home">
                 {
                     this.state.items.map((item: IHomeItem) =>
-                        <Link to={item.link} key={item.image}>
-                            <div className="home-item" style={{width: '200px', height: '200px', backgroundSize: '100%', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: `url(http://localhost:8080/${item.image})`}}>&nbsp;</div>
+                        <Link to={item.link} key={item.image} className="home-item-wrapper">
+                            <div className="home-item" style={{backgroundImage: `url(http://localhost:8080/${item.image})`}} />
                         </Link>
                     )
                 }
