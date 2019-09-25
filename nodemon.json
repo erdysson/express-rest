@@ -6,11 +6,12 @@
   ],
   "verbose": true,
   "watch": [
-    "**/*.ts"
+    "app-core/**/*.ts"
   ],
   "ignoreRoot": [
-    "*.js",
-    "**/*.js"
+    "**/*.js",
+    "**/*.scss",
+    "**/*.tsx"
   ],
   "env": {
     "NODE_ENV": "development"

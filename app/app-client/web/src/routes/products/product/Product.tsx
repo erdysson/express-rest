@@ -4,6 +4,7 @@ import {IItem} from '../../../../interfaces/interface';
 import Item from '../../../components/product/item/Item';
 
 interface Props {
+    productType: string;
     items: IItem[];
 }
 
@@ -13,7 +14,7 @@ class Product extends React.Component<Props> {
         return (
             <div className="route-product">
                 {
-                    this.props.items.map((item: IItem) => (<Item key={item.id} item={item} />))
+                    this.props.items.map((item: IItem) => <Item key={item.id} item={item} productType={this.props.productType} />)
                 }
             </div>
         );

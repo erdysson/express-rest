@@ -3,6 +3,7 @@ import {Route, Link} from 'react-router-dom';
 import Product from "./product/Product";
 import TranslateService from '../../services/Translate.service';
 import {IItem, IProduct} from '../../../interfaces/interface';
+import ItemDetails from '../../components/product/item-details/Item-details';
 import './products.scss';
 
 interface Props {
@@ -67,6 +68,12 @@ class Products extends React.Component<Props, State> {
         }
     }
 
+    getProductItemDetails(productName: string, productId: string): IItem|null {
+        const productItems: IItem[] = this.getProductItems(productName);
+        const maybeItem: IItem = productItems.filter((item: IItem) => item.id === productId)[0];
+        return maybeItem || null;
+    }
+
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
         if (this.state.products.length === 0) {
             return null;
@@ -86,7 +93,12 @@ class Products extends React.Component<Props, State> {
                 </div>
                 <div className="route-product-content">
                     <Route path={`${this.props.match.path}/:productType`}
-                           render={(props) => <Product items={this.getProductItems(props.match.params.productType)} />}
+                           exact={true}
+                           render={(props) => <Product productType={props.match.params.productType} items={this.getProductItems(props.match.params.productType)} />}
+                    />
+                    <Route path={`${this.props.match.path}/:productType/:productName`}
+                           exact={true}
+                           render={(props) => <ItemDetails item={this.getProductItemDetails(props.match.params.productType, props.match.params.productName)} />}
                     />
                 </div>
             </div>

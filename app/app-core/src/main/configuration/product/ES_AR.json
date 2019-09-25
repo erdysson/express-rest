@@ -6,7 +6,7 @@
       "items": [
         {
           "id": "table-quad",
-          "name": "forma.product.table.quad.name",
+          "name": "forma.product.tables.quad.name",
           "price": "$47.900,00",
           "showPrice": true,
           "imageUrl": "images/product/tables/forma_mesa_quad_01.jpg",
@@ -18,12 +18,12 @@
               "images/product/tables/forma_mesa_quad_03.jpg"
             ],
             "measurements": "200 x 100 cm",
-            "description": "forma.product.table.quad.description"
+            "description": "forma.product.tables.quad.description"
           }
         },
         {
           "id": "table-t",
-          "name": "forma.product.table.t.name",
+          "name": "forma.product.tables.t.name",
           "price": "$47.900,00",
           "showPrice": true,
           "imageUrl": "images/product/tables/forma_mesas_T_01.jpg",
@@ -34,12 +34,12 @@
               "images/product/tables/forma_mesas_T_02.jpg"
             ],
             "measurements": "200 x 100 cm",
-            "description": "forma.product.table.t.description"
+            "description": "forma.product.tables.t.description"
           }
         },
         {
           "id": "table-concorde",
-          "name": "forma.product.table.concorde.name",
+          "name": "forma.product.tables.concorde.name",
           "price": "$65.900,00",
           "showPrice": true,
           "imageUrl": "images/product/tables/forma_mesas_concorde_01.jpg",
@@ -51,12 +51,12 @@
               "images/product/tables/forma_mesas_concorde_03.jpg"
             ],
             "measurements": "250 x 110 cm",
-            "description": "forma.product.table.concorde.description"
+            "description": "forma.product.tables.concorde.description"
           }
         },
         {
           "id": "table-sen",
-          "name": "forma.product.table.sen.name",
+          "name": "forma.product.tables.sen.name",
           "price": "$64.300,00",
           "showPrice": true,
           "imageUrl": "images/product/tables/forma_mesas_sen_01.jpg",
@@ -68,12 +68,12 @@
               "images/product/tables/forma_mesas_sen_03.jpg"
             ],
             "measurements": "250 x 110 cm",
-            "description": "forma.product.table.sen.description"
+            "description": "forma.product.tables.sen.description"
           }
         },
         {
           "id": "table-flot",
-          "name": "forma.product.table.flot.name",
+          "name": "forma.product.tables.flot.name",
           "price": "$54.300,00",
           "showPrice": true,
           "imageUrl": "images/product/tables/forma_mesas_Flot_01.jpg",
@@ -86,12 +86,12 @@
               "images/product/tables/forma_mesas_Flot_04.jpg"
             ],
             "measurements": "200 x 100 cm",
-            "description": "forma.product.table.flot.description"
+            "description": "forma.product.tables.flot.description"
           }
         },
         {
           "id": "table-doblet",
-          "name": "forma.product.table.doblet.name",
+          "name": "forma.product.tables.doblet.name",
           "price": "$54.700,00",
           "showPrice": true,
           "imageUrl": "images/product/tables/forma_mesa_doble_t.jpg",
@@ -103,12 +103,12 @@
               "images/product/tables/forma_mesa_doble_t_02.jpg"
             ],
             "measurements": "220 x 110 cm",
-            "description": "forma.product.table.doblet.description"
+            "description": "forma.product.tables.doblet.description"
           }
         },
         {
           "id": "table-prisma",
-          "name": "forma.product.table.prisma.name",
+          "name": "forma.product.tables.prisma.name",
           "price": "$49.900,00",
           "oldPrice": "$69.240,00",
           "showPrice": true,
@@ -120,12 +120,12 @@
               "images/product/tables/forma_mesa_prisma_200x100_01.jpg"
             ],
             "measurements": "200 x 100 cm",
-            "description": "forma.product.table.prisma.description"
+            "description": "forma.product.tables.prisma.description"
           }
         },
         {
           "id": "table-classic",
-          "name": "forma.product.table.classic.name",
+          "name": "forma.product.tables.classic.name",
           "price": "$41.600,00",
           "oldPrice": "$50.388,00",
           "showPrice": true,
@@ -138,12 +138,12 @@
               "images/product/tables/forma_mesas_classic_03.jpg"
             ],
             "measurements": "180 x 90 cm",
-            "description": "forma.product.table.classic.description"
+            "description": "forma.product.tables.classic.description"
           }
         },
         {
           "id": "table-dressoir",
-          "name": "forma.product.table.dressoir.name",
+          "name": "forma.product.tables.dressoir.name",
           "price": "$19.900,00",
           "oldPrice": "$24.900,00",
           "showPrice": true,
@@ -157,12 +157,12 @@
               "images/product/tables/forma_mesa_dressoir_04.jpg"
             ],
             "measurements": "120 x 80 x 35cm ",
-            "description": "forma.product.table.dressoir.description"
+            "description": "forma.product.tables.dressoir.description"
           }
         },
         {
           "id": "table-dressoir-iron",
-          "name": "forma.product.table.dressoir.iron.name",
+          "name": "forma.product.tables.dressoir.iron.name",
           "price": "$19.900,00",
           "oldPrice": "$24.900,00",
           "showPrice": true,
@@ -175,7 +175,7 @@
               "images/product/tables/forma_dressoir_iron_03.jpg"
             ],
             "measurements": "127 x 86 x 36cm ",
-            "description": "forma.product.table.dressoir.iron.description"
+            "description": "forma.product.tables.dressoir.iron.description"
           }
         }
       ]
@@ -186,7 +186,7 @@
       "items": [
         {
           "id": "coffee-table-iron",
-          "name": "forma.product.coffeetable.iron.name",
+          "name": "forma.product.coffeetables.iron.name",
           "price": "$18.900,00",
           "oldPrice": "$22.700,00",
           "showPrice": true,
@@ -199,12 +199,12 @@
               "images/product/coffee-tables/forma_mesas_bajas_iron_02.jpg"
             ],
             "measurements": "127 x 40 x 46 cm",
-            "description": "forma.product.coffeetable.iron.description"
+            "description": "forma.product.coffeetables.iron.description"
           }
         },
         {
           "id": "coffee-table-damero",
-          "name": "forma.product.coffeetable.damero.name",
+          "name": "forma.product.coffeetables.damero.name",
           "price": "$30.600,00",
           "oldPrice": "$36.800,00",
           "showPrice": true,
@@ -217,12 +217,12 @@
               "images/product/coffee-tables/forma_mesas_bajas_damero_03.jpg"
             ],
             "measurements": "120 x 60, 140 x 70 cm, 140 x 80 cm",
-            "description": "forma.product.coffeetable.damero.description"
+            "description": "forma.product.coffeetables.damero.description"
           }
         },
         {
           "id": "coffee-table-tori",
-          "name": "forma.product.coffeetable.torii.name",
+          "name": "forma.product.coffeetables.torii.name",
           "price": "$19.900,00",
           "oldPrice": "$22.800,00",
           "showPrice": true,
@@ -235,12 +235,12 @@
               "images/product/coffee-tables/forma_mesa_centro_torii_03.jpg"
             ],
             "measurements": "120 x 60, 140 x 70 cm, 140 x 80 cm",
-            "description": "forma.product.coffeetable.torii.description"
+            "description": "forma.product.coffeetables.torii.description"
           }
         },
         {
           "id": "coffee-table-we",
-          "name": "forma.product.coffeetable.we.name",
+          "name": "forma.product.coffeetables.we.name",
           "price": "$19.900,00",
           "oldPrice": "$22.800,00",
           "showPrice": true,
@@ -253,12 +253,12 @@
               "images/product/coffee-tables/forma_mesa_centro_we_03.jpg"
             ],
             "measurements": "180 x 60 cm",
-            "description": "forma.product.coffeetable.we.description"
+            "description": "forma.product.coffeetables.we.description"
           }
         },
         {
           "id": "coffee-table-wire",
-          "name": "forma.product.coffeetable.wire.name",
+          "name": "forma.product.coffeetables.wire.name",
           "price": "$19.900,00",
           "oldPrice": "$22.800,00",
           "showPrice": true,
@@ -270,12 +270,12 @@
               "images/product/coffee-tables/forma_mesa_centro_wire.jpg"
             ],
             "measurements": "120 x 60 cm",
-            "description": "forma.product.coffeetable.wire.description"
+            "description": "forma.product.coffeetables.wire.description"
           }
         },
         {
           "id": "coffee-table-doblet",
-          "name": "forma.product.coffeetable.doblet.name",
+          "name": "forma.product.coffeetables.doblet.name",
           "price": "$15.700,00",
           "oldPrice": "$18.900,00",
           "showPrice": true,
@@ -288,7 +288,7 @@
               "images/product/coffee-tables/forma_mesa_centro_doble_t_02.jpg"
             ],
             "measurements": "120 x 60 cm",
-            "description": "forma.product.coffeetable.doblet.description"
+            "description": "forma.product.coffeetables.doblet.description"
           }
         }
       ]
@@ -299,7 +299,7 @@
       "items": [
         {
           "id": "tv-table-frame-e2pm",
-          "name": "forma.product.tvtable.framee2pm.name",
+          "name": "forma.product.tvtables.framee2pm.name",
           "price": "$56.950,00",
           "oldPrice": "$68.500,00",
           "showPrice": true,
@@ -312,12 +312,12 @@
               "images/product/tv-tables/forma_tv_frame_e2p_madera_03.jpg"
             ],
             "measurements": "195 x 65 x 43cm",
-            "description": "forma.product.tvtable.framee2pm.description"
+            "description": "forma.product.tvtables.framee2pm.description"
           }
         },
         {
           "id": "tv-table-frame-2p",
-          "name": "forma.product.tvtable.framee2p.name",
+          "name": "forma.product.tvtables.framee2p.name",
           "price": "$57.950,00",
           "oldPrice": "$69.500,00",
           "showPrice": true,
@@ -329,12 +329,12 @@
               "images/product/tv-tables/forma_mueble_tv_frame_E2P_02.jpg"
             ],
             "measurements": "195 x 65 x 43cm",
-            "description": "forma.product.tvtable.framee2p.description"
+            "description": "forma.product.tvtables.framee2p.description"
           }
         },
         {
           "id": "tv-table-iron-192",
-          "name": "forma.product.tvtable.iron192.name",
+          "name": "forma.product.tvtables.iron192.name",
           "price": "$28.600,00",
           "oldPrice": "$34.400,00",
           "showPrice": true,
@@ -347,12 +347,12 @@
               "images/product/tv-tables/forma_muebletv_iron_192_03.jpg"
             ],
             "measurements": "192 x 64 x 37 cm",
-            "description": "orma.product.tvtable.iron192.description"
+            "description": "orma.product.tvtables.iron192.description"
           }
         },
         {
           "id": "tv-table-iron-252",
-          "name": "forma.product.tvtable.iron252.name",
+          "name": "forma.product.tvtables.iron252.name",
           "price": "$46.800,00",
           "oldPrice": "$56.200,00",
           "showPrice": true,
@@ -365,12 +365,12 @@
               "images/product/tv-tables/forma_mueblestv_iron_253_03.jpg"
             ],
             "measurements": "252 X 64 X 37 cm",
-            "description": "forma.product.tvtable.iron252.description"
+            "description": "forma.product.tvtables.iron252.description"
           }
         },
         {
           "id": "tv-table-frame-e20b",
-          "name": "forma.product.tvtable.framee20b.name",
+          "name": "forma.product.tvtables.framee20b.name",
           "price": "$56.900,00",
           "oldPrice": "$68.300,00",
           "showPrice": true,
@@ -383,12 +383,12 @@
               "images/product/tv-tables/forma_tv_e20_black_03.jpg"
             ],
             "measurements": "244 x 51 x 43 cm",
-            "description": "forma.product.tvtable.framee20b.description"
+            "description": "forma.product.tvtables.framee20b.description"
           }
         },
         {
           "id": "tv-table-frame-e20",
-          "name": "forma.product.tvtable.framee20.name",
+          "name": "forma.product.tvtables.framee20.name",
           "price": "$56.900,00",
           "oldPrice": "$68.300,00",
           "showPrice": true,
@@ -401,12 +401,12 @@
               "images/product/tv-tables/forma_tv_e20_madera_03.jpg"
             ],
             "measurements": "244 x 51 x 43 cm",
-            "description": "forma.product.tvtable.framee20.description"
+            "description": "forma.product.tvtables.framee20.description"
           }
         },
         {
           "id": "tv-table-frame-e20l",
-          "name": "forma.product.tvtable.framee20l.name",
+          "name": "forma.product.tvtables.framee20l.name",
           "price": "$43.500,00",
           "oldPrice": "$52.800,00",
           "showPrice": true,
@@ -419,12 +419,12 @@
               "images/product/tv-tables/forma_tv_e20_laca_01.jpg"
             ],
             "measurements": "244 x 51 x 43 cm",
-            "description": "forma.product.tvtable.framee20l.description"
+            "description": "forma.product.tvtables.framee20l.description"
           }
         },
         {
           "id": "tv-table-frame-f6b",
-          "name": "forma.product.tvtable.framef6b.name",
+          "name": "forma.product.tvtables.framef6b.name",
           "price": "$47.200,00",
           "oldPrice": "$56.700,00",
           "showPrice": true,
@@ -437,12 +437,12 @@
               "images/product/tv-tables/forma_mueble_tv_f6_black_02.jpg"
             ],
             "measurements": "183 x 51 x 43 cm",
-            "description": "forma.product.tvtable.framef6b.description"
+            "description": "forma.product.tvtables.framef6b.description"
           }
         },
         {
           "id": "tv-table-frame-f6",
-          "name": "forma.product.tvtable.framef6.name",
+          "name": "forma.product.tvtables.framef6.name",
           "price": "$47.200,00",
           "oldPrice": "$56.700,00",
           "showPrice": true,
@@ -455,12 +455,12 @@
               "images/product/tv-tables/forma_mueble_tv_f6_madera_02.jpg"
             ],
             "measurements": "183 x 51 x 43 cm",
-            "description": "forma.product.tvtable.framef6.description"
+            "description": "forma.product.tvtables.framef6.description"
           }
         },
         {
           "id": "tv-table-frame-f6l",
-          "name": "forma.product.tvtable.framef6l.name",
+          "name": "forma.product.tvtables.framef6l.name",
           "price": "$43.900,00",
           "oldPrice": "$52.700,00",
           "showPrice": true,
@@ -473,12 +473,12 @@
               "images/product/tv-tables/forma_mueble_tv_f6_white_02.jpg"
             ],
             "measurements": "183 x 51 x 43 cm",
-            "description": "forma.product.tvtable.framef6l.description"
+            "description": "forma.product.tvtables.framef6l.description"
           }
         },
         {
           "id": "tv-table-frame",
-          "name": "forma.product.tvtable.frame.name",
+          "name": "forma.product.tvtables.frame.name",
           "price": "$29.200,00",
           "oldPrice": "$34.900,00",
           "showPrice": true,
@@ -491,12 +491,12 @@
               "images/product/tv-tables/forma_muebletv_bar_01.jpg"
             ],
             "measurements": "varias",
-            "description": "forma.product.tvtable.frame.description"
+            "description": "forma.product.tvtables.frame.description"
           }
         },
         {
           "id": "tv-table-frame-f9",
-          "name": "forma.product.tvtable.framef9.name",
+          "name": "forma.product.tvtables.framef9.name",
           "price": "$33.200,00",
           "oldPrice": "$39.900,00",
           "showPrice": true,
@@ -510,12 +510,12 @@
               "images/product/tv-tables/forma_muebletv_f9_02.jpg"
             ],
             "measurements": "183 x 50 x 33 cm",
-            "description": "forma.product.tvtable.framef9.description"
+            "description": "forma.product.tvtables.framef9.description"
           }
         },
         {
           "id": "tv-table-frame-01",
-          "name": "forma.product.tvtable.frame01.name",
+          "name": "forma.product.tvtables.frame01.name",
           "price": "$34.900,00",
           "oldPrice": "$41.100,00",
           "showPrice": true,
@@ -527,12 +527,12 @@
               "images/product/tv-tables/forma_muebletv_frame.jpg"
             ],
             "measurements": "Varios",
-            "description": "forma.product.tvtable.frame01.description"
+            "description": "forma.product.tvtables.frame01.description"
           }
         },
         {
           "id": "tv-table-frame-f6la",
-          "name": "forma.product.tvtable.framef6la.name",
+          "name": "forma.product.tvtables.framef6la.name",
           "price": "$43.900,00",
           "oldPrice": "$52.700,00",
           "showPrice": true,
@@ -545,12 +545,12 @@
               "images/product/tv-tables/forma_muebletv_lack_p183_02.jpg"
             ],
             "measurements": "183 x 48 x 43 cm",
-            "description": "forma.product.tvtable.framef6la.description"
+            "description": "forma.product.tvtables.framef6la.description"
           }
         },
         {
           "id": "tv-table-frame-02",
-          "name": "forma.product.tvtable.frame02.name",
+          "name": "forma.product.tvtables.frame02.name",
           "price": "$39.900,00",
           "oldPrice": "$46.900,00",
           "showPrice": true,
@@ -563,7 +563,7 @@
               "images/product/tables/forma_mueble_tv_frame_2_03.jpg"
             ],
             "measurements": "230 x 63 x 38 cm",
-            "description": "forma.product.tvtable.frame02.description"
+            "description": "forma.product.tvtables.frame02.description"
           }
         }
       ]
