@@ -18,10 +18,10 @@ class ItemDetails extends React.Component<Props> {
             <div className="route-item-details">
                 {
                     this.props.item.details.images.map((imageUrl: string) =>
-                        <div className="item-image-wrapper" key={imageUrl}>
-                                <div className="item-detail-image" style={{backgroundImage: `url(http://localhost:8080/${imageUrl})`}} />
-                            </div>
-                        )
+                        <a className="item-image-wrapper" key={imageUrl} target="_blank" rel="noopener noreferrer" href={(this.props.item || {fbLink: ''} as IItem).fbLink}>
+                            <div className="item-detail-image" style={{backgroundImage: `url(http://localhost:8080/${imageUrl})`}} />
+                        </a>
+                    )
                 }
                 <div className="item-detail-wrapper">
                     <div className="item-detail">

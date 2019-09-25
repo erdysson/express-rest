@@ -1,7 +1,6 @@
 .route-products {
     display: flex;
     flex-direction: column;
-    width: 100%;
 
     .route-product-links-wrapper {
         display: flex;
@@ -29,7 +28,5 @@
 
     .route-product-content {
         display: flex;
-        flex-grow: 1;
-        flex-shrink: 1;
     }
 }

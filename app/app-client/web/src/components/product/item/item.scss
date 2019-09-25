@@ -7,10 +7,24 @@
     margin: 10px;
     width: calc(25% - 20px);
 
+    @media screen and (max-width: 600px) {
+        margin: 0;
+        width: 100%;
+    }
+
     .item {
+        align-items: center;
         display: flex;
         flex-direction: column;
+        overflow: hidden;
         width: 100%;
+
+        &:hover {
+
+            .item-image {
+                transform: scale(1.4);
+            }
+        }
 
         .item-image {
             background-position: center;
@@ -18,10 +32,16 @@
             background-size: 100%;
             display: flex;
             padding-top: calc(100% - 20px);
+            transform-origin: center;
+            transition-delay: .2s;
+            transition-duration: .2s;
+            transition-property: transform;
+            transition-timing-function: ease-in;
             width: calc(100% - 20px);
         }
 
         .item-description {
+            align-items: center;
             color: #333;
             display: flex;
             font-family: Chivo-Light;
