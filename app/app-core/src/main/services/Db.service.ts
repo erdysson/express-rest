@@ -1,0 +1,1 @@
+import {Connection, Mongoose, connect} from 'mongoose';export default class DbService {    private static MONGO_URI: string = '';    public static connect(): Promise<Connection> {        return connect(DbService.MONGO_URI, {keepAlive: true, keepAliveInitialDelay: 300000})            .then((m: Mongoose) => m.connection);    }}

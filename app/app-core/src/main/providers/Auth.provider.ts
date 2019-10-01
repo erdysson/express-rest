@@ -1,10 +1,14 @@
 import FileService from '../services/File.service';
 import path from 'path';
 import jwt from 'jsonwebtoken';
+import {IUserModel} from '../interfaces/models.interface';
 
 class AuthProvider {
 
-    private issuer: string = 'forma-web';
+    private privateKey: jwt.Secret;
+    private publicKey: string;
+
+    // private issuer: string = 'forma-web';
     private audience: string = 'http://formamueble.com';
 
     private FileService: FileService;
@@ -14,24 +18,37 @@ class AuthProvider {
     }
 
     private getPrivateKey(): Promise<jwt.Secret> {
+        if (this.privateKey) {
+            return Promise.resolve(this.privateKey);
+        }
         const filePath: string = path.join(__dirname, '..', 'security', 'private.key');
-        return this.FileService.read(filePath);
+        return this.FileService.read(filePath)
+            .then((privateKey: jwt.Secret) => {
+                this.privateKey = privateKey;
+                return this.privateKey;
+            });
     }
 
     private getPublicKey(): Promise<string> {
+        if (this.publicKey) {
+            return Promise.resolve(this.publicKey);
+        }
         const filePath: string = path.join(__dirname, '..', 'security', 'public.key');
-        return this.FileService.read(filePath);
+        return this.FileService.read(filePath)
+        .then((publicKey: string) => {
+            this.publicKey = publicKey;
+            return this.publicKey;
+        });
     }
 
-    public authenticate(user: any): Promise<string> {
+    public authenticate(user: Partial<IUserModel>): Promise<string> {
         return this.getPrivateKey()
             .then((privateKey: jwt.Secret) => {
                 const signOptions: jwt.SignOptions = {
-                    issuer: this.issuer,
-                    subject: user.email,
+                    // issuer: this.issuer,
+                    // subject: user.email,
                     audience: user.id,
-                    expiresIn:  '12h',
-                    algorithm:  'RS256'
+                    expiresIn:  '12h'
                 };
 
                 const token = jwt.sign(user, privateKey, signOptions);
@@ -40,15 +57,14 @@ class AuthProvider {
             });
     }
 
-    public authorize(email: string, token: string): Promise<boolean> {
+    public authorize(user: Partial<IUserModel>, token: string): Promise<boolean> {
         return this.getPublicKey()
             .then((publicKey: string) => {
                 try {
                     const verifyOptions: jwt.VerifyOptions = {
-                        issuer: this.issuer,
-                        subject: email,
-                        audience: this.audience,
-                        algorithms:  ['RS256']
+                        // issuer: this.issuer,
+                        // subject: email,
+                        audience: this.audience
                     };
                     const legit = jwt.verify(token, publicKey, verifyOptions);
                     console.log('JWT verification result: ', JSON.stringify(legit));

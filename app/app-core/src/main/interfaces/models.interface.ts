@@ -1,0 +1,1 @@
+import {Document} from 'mongoose';export interface IUserModel extends Document {    email: string;    password: string;    name: string;    lastName: string;    created: Date;    updated: Date;}export interface IUserSessionModel extends Document {    token: string;    created: Date;    updated: Date;}

@@ -3,8 +3,7 @@ import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import express from 'express';
 import {Express} from 'express-serve-static-core';
-import {IndexController} from './routes/Index.controller';
-import {LoginController} from './routes/Login.controller';
+import {AuthController} from './routes/Auth.controller';
 import {UserController} from './routes/User.controller';
 import {Server} from '../../../../lib/decorators/decorators';
 import UserProvider from './providers/User.provider';
@@ -16,7 +15,7 @@ import ConfigProvider from './providers/Config.provider';
 
 @Server({
   providers: [UserProvider, AuthProvider, TranslationProvider, ConfigProvider],
-  controllers: [IndexController, LoginController, UserController, TranslationController, ConfigController],
+  controllers: [AuthController, UserController, TranslationController, ConfigController],
   port: 8080
 })
 class S {
