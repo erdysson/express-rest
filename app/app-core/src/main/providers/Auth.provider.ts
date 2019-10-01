@@ -1,14 +1,15 @@
 import FileService from '../services/File.service';
 import path from 'path';
 import jwt from 'jsonwebtoken';
-import {IUserModel} from '../interfaces/models.interface';
+import {IUserModel, IUserSessionModel} from '../interfaces/models.interface';
+import UserSessionModel from '../models/user_session.model';
 
 class AuthProvider {
 
     private privateKey: jwt.Secret;
     private publicKey: string;
 
-    // private issuer: string = 'forma-web';
+    private issuer: string = 'forma-web';
     private audience: string = 'http://formamueble.com';
 
     private FileService: FileService;
@@ -41,11 +42,11 @@ class AuthProvider {
         });
     }
 
-    public authenticate(user: Partial<IUserModel>): Promise<string> {
+    public authenticate(user: IUserModel): Promise<string> {
         return this.getPrivateKey()
             .then((privateKey: jwt.Secret) => {
                 const signOptions: jwt.SignOptions = {
-                    // issuer: this.issuer,
+                    issuer: this.issuer,
                     // subject: user.email,
                     audience: user.id,
                     expiresIn:  '12h'
@@ -53,16 +54,24 @@ class AuthProvider {
 
                 const token = jwt.sign(user, privateKey, signOptions);
                 console.log('Token :', token);
-                return token;
+
+                const session: IUserSessionModel = new UserSessionModel({
+                    token: token,
+                    created: Date.now(),
+                    updated: Date.now()
+                });
+
+                return session.save({validateBeforeSave: true})
+                    .then((session: IUserSessionModel) => session.token);
             });
     }
 
-    public authorize(user: Partial<IUserModel>, token: string): Promise<boolean> {
+    public authorize(user: IUserModel, token: string): Promise<boolean> {
         return this.getPublicKey()
             .then((publicKey: string) => {
                 try {
                     const verifyOptions: jwt.VerifyOptions = {
-                        // issuer: this.issuer,
+                        issuer: this.issuer,
                         // subject: email,
                         audience: this.audience
                     };

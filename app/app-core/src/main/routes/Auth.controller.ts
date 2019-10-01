@@ -34,7 +34,15 @@ export class AuthController {
                     .then(() => {
                         // set the jwt and return data
                         console.log('login success', user);
-                        res.json({message: 'login success', token: 'token'});
+                        this.AuthProvider.authenticate(user)
+                            .then((token: string) => {
+
+                                res.json({token});
+                            })
+                            .catch((error: Error) => {
+                                console.log('can not create token', error);
+                                res.status(500);
+                            })
                     })
                     .catch(() => {
                         console.log('can not validate password', user);
