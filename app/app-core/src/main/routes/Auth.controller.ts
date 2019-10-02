@@ -26,10 +26,10 @@ export class AuthController {
                     })
                     .catch((error: Error) => {
                         console.log('can not create token', error);
-                        res.status(500);
+                        res.sendStatus(500);
                     });
             })
-            .catch(() => res.status(500));
+            .catch(() => res.sendStatus(500));
     }
 
     @POST('/login')
@@ -46,12 +46,12 @@ export class AuthController {
                             })
                             .catch((error: Error) => {
                                 console.log('can not create token', error);
-                                res.status(500);
+                                res.sendStatus(500);
                             });
                     })
                     .catch(() => {
                         console.log('can not validate password', user);
-                        res.status(405);
+                        res.sendStatus(405);
                     });
             })
             .catch((error: any) => {

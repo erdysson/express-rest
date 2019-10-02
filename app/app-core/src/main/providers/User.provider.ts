@@ -67,6 +67,22 @@ class UserProvider {
             });
         });
     }
+
+    public getUsers(): Promise<IUserModel[]> {
+        return new Promise((resolve, reject) => {
+            DbService.connect()
+            .then((connection: Connection) => {
+                UserModel.find({}, (err: any, res: IUserModel[]) => {
+                    if (err) {
+                        reject(err);
+                    } else {
+                        resolve(res);
+                    }
+                })
+                .catch((e: any) => reject(e));
+            });
+        });
+    }
 }
 
 export default UserProvider;

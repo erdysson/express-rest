@@ -45,9 +45,9 @@ class AuthProvider {
         return this.getPrivateKey()
             .then((privateKey: jwt.Secret) => {
                 const signOptions: jwt.SignOptions = {
-                    issuer: this.issuer,
+                    // issuer: this.issuer,
                     // subject: user.email,
-                    audience: user.id.toString(),
+                    // audience: user.id.toString(),
                     expiresIn:  '12h'
                 };
                 const token = jwt.sign(user.toJSON(), privateKey, signOptions);
@@ -56,21 +56,24 @@ class AuthProvider {
             });
     }
 
-    public authorize(user: IUserModel, token: string): Promise<boolean> {
+    public authorize(token: string): Promise<void> {
         return this.getPublicKey()
             .then((publicKey: string) => {
-                try {
-                    const verifyOptions: jwt.VerifyOptions = {
-                        issuer: this.issuer,
-                        // subject: email,
-                        audience: this.audience
-                    };
-                    const legit = jwt.verify(token, publicKey, verifyOptions);
-                    console.log('JWT verification result: ', JSON.stringify(legit));
-                    return true;
-                } catch (e) {
-                    return false;
-                }
+                return new Promise((resolve, reject) => {
+                    try {
+                        const verifyOptions: jwt.VerifyOptions = {
+                            // issuer: this.issuer,
+                            // subject: email,
+                            // audience: this.audience
+                        };
+                        const legit = jwt.verify(token, publicKey, verifyOptions);
+                        console.log('JWT verification result: ', JSON.stringify(legit));
+                        resolve();
+                    } catch (e) {
+                        console.log('can not verify the token', e);
+                        reject(e);
+                    }
+                })
             });
     }
 }
