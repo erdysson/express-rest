@@ -1,8 +1,7 @@
 import FileService from '../services/File.service';
 import path from 'path';
 import jwt from 'jsonwebtoken';
-import {IUserModel, IUserSessionModel} from '../interfaces/models.interface';
-import UserSessionModel from '../models/user_session.model';
+import {IUserModel} from '../interfaces/models.interface';
 
 class AuthProvider {
 
@@ -48,21 +47,12 @@ class AuthProvider {
                 const signOptions: jwt.SignOptions = {
                     issuer: this.issuer,
                     // subject: user.email,
-                    audience: user.id,
+                    audience: user.id.toString(),
                     expiresIn:  '12h'
                 };
-
-                const token = jwt.sign(user, privateKey, signOptions);
-                console.log('Token :', token);
-
-                const session: IUserSessionModel = new UserSessionModel({
-                    token: token,
-                    created: Date.now(),
-                    updated: Date.now()
-                });
-
-                return session.save({validateBeforeSave: true})
-                    .then((session: IUserSessionModel) => session.token);
+                const token = jwt.sign(user.toJSON(), privateKey, signOptions);
+                console.log('generated token', token);
+                return token;
             });
     }
 

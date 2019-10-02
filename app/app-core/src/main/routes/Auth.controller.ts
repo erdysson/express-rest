@@ -20,7 +20,14 @@ export class AuthController {
         this.UserProvider.createUser(email, password, name, lastName)
             .then((user: IUserModel) => {
                 // set the jwt and return data
-                res.json({message: 'sign up success', token: 'token'});
+                this.AuthProvider.authenticate(user)
+                    .then((token: string) => {
+                        res.json({token});
+                    })
+                    .catch((error: Error) => {
+                        console.log('can not create token', error);
+                        res.status(500);
+                    });
             })
             .catch(() => res.status(500));
     }
@@ -28,21 +35,19 @@ export class AuthController {
     @POST('/login')
     public doLogin(req: Request, res: Response): void {
         const {email, password} = req.body;
-        this.UserProvider.getUserByLoginData(email, password)
+        this.UserProvider.getUserByEmailData(email)
             .then((user: IUserModel) => {
                 AuthService.validatePassword(password, user.password)
                     .then(() => {
                         // set the jwt and return data
-                        console.log('login success', user);
                         this.AuthProvider.authenticate(user)
                             .then((token: string) => {
-
                                 res.json({token});
                             })
                             .catch((error: Error) => {
                                 console.log('can not create token', error);
                                 res.status(500);
-                            })
+                            });
                     })
                     .catch(() => {
                         console.log('can not validate password', user);

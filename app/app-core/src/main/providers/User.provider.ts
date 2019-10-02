@@ -13,27 +13,48 @@ class UserProvider {
     public createUser(email: string, password: string, name: string, lastName: string): Promise<IUserModel> {
         return DbService.connect()
             .then((connection: Connection) => {
-                const userModel: IUserModel = new UserModel({
-                    email: email,
-                    name: name,
-                    lastName: lastName,
-                    password: AuthService.createPasswordHash(password),
-                    created: Date.now(),
-                    updated: Date.now()
-                });
-                return userModel.save({validateBeforeSave: true});
+                console.log('connected to db');
+                return AuthService.createPasswordHash(password)
+                    .then((passwordHash: string) => {
+                        const userModel: IUserModel = new UserModel({
+                            email: email,
+                            name: name,
+                            lastName: lastName,
+                            password: passwordHash,
+                            created: Date.now(),
+                            updated: Date.now()
+                        });
+
+                        return new Promise<IUserModel>((resolve, reject) => {
+                            userModel.save({validateBeforeSave: true}, (err: any, product: IUserModel) => {
+                                if (err) {
+                                    reject(err);
+                                } else {
+                                    resolve(product);
+                                }
+                            });
+                        });
+                    });
             });
     }
 
-    public getUserByLoginData(email: string, password: string): Promise<IUserModel> {
-        return new Promise<IUserModel>((resolve, reject) => {
-            UserModel.findOne({email, password}, (error: any, user: IUserModel|null) => {
-                if (error) {
-                    reject(error);
-                }
-                resolve(user);
-            });
-        });
+    public getUserByEmailData(email: string): Promise<IUserModel> {
+        return DbService.connect()
+            .then((connection: Connection) => {
+                return new Promise<IUserModel>((resolve, reject) => {
+                    UserModel.findOne({email}, (error: any, user: IUserModel|null) => {
+                        if (error) {
+                            reject(error);
+                        } else {
+                            resolve(user);
+                        }
+                    });
+                });
+            })
+            .catch((e: any) => {
+                console.log('can not connect to db', e);
+                return Promise.reject(e);
+            })
     }
 
     public getUserById(id: string): Promise<IUserModel> {
