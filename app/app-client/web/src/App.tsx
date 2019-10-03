@@ -7,16 +7,45 @@ import {fab} from '@fortawesome/free-brands-svg-icons';
 import './styles/app.scss';
 import TranslateService from './services/Translate.service';
 
+interface Props {
+
+}
+
+interface State {
+    translationsLoaded: boolean;
+    token: string;
+}
+
 library.add(fas, fab);
 
-class App extends React.Component<{}, {translationsLoaded: boolean}> {
+class App extends React.Component<Props, State> {
 
-    constructor(props: any) {
+    constructor(props: Props) {
         super(props);
 
         this.state = {
-            translationsLoaded: false
+            translationsLoaded: false,
+            token: ''
         };
+    }
+
+    getAuthToken(): Promise<string> {
+        return fetch('/login', {
+            headers: {'Content-type': 'application/json'},
+            body: JSON.stringify({
+                email: 'erdi.gokalp@gmail.com',
+                password: 'Etg1990!'
+            }),
+            method: 'POST'
+        })
+            .then((res: any) => res.json())
+            .then((res: any) => {
+                console.log('auth token :', res.token);
+                return res.token;
+            })
+            .catch((e: any) => {
+                console.log('failed to login', e);
+            });
     }
 
     getTranslations(branchCode: string): Promise<Record<string, string>> {
@@ -30,13 +59,43 @@ class App extends React.Component<{}, {translationsLoaded: boolean}> {
             });
     }
 
+    getUsers(): Promise<any[]> {
+        console.log('getting users', this.state.token);
+        return fetch('/users', {
+            headers: {
+                'Content-type': 'application/json',
+                'Authorization': 'Bearer ' + this.state.token
+            },
+            body: JSON.stringify({
+                email: 'erdi.gokalp@gmail.com',
+                password: 'Etg1990!'
+            }),
+            method: 'POST'
+        })
+        .then((res: any) => res.json())
+        .catch((e: any) => {
+            console.log('failed to login', e);
+        })
+    }
+
     componentDidMount(): void {
+        this.getAuthToken()
+        .then((res: string) => {
+            this.setState(Object.assign(this.state, {token: res}));
+        });
         this.getTranslations('ES_AR')
             .then((translations: Record<string, string>) => {
                 console.log('translation :', translations);
                 TranslateService.init(translations);
-                this.setState({translationsLoaded: true});
+                this.setState(Object.assign(this.state, {translationsLoaded: true}));
             });
+    }
+
+    componentDidUpdate(prevProps: Readonly<Props>, prevState: Readonly<State>, snapshot?: any): void {
+        if (this.state.token) {
+            this.getUsers()
+                .then((users: any[]) => console.log(users));
+        }
     }
 
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {

@@ -1,5 +1,5 @@
 import {Request, Response} from 'express-serve-static-core';
-import {Authenticated, GET, POST, Provide} from '../../../../../lib/decorators/decorators';
+import {Authenticated, POST, Provide} from '../../../../../lib/decorators/decorators';
 import UserProvider from '../providers/User.provider';
 import {IUserModel} from '../interfaces/models.interface';
 import AuthProvider from '../providers/Auth.provider';
@@ -14,7 +14,7 @@ export class UserController {
     }
 
     @Authenticated()
-    @GET('/users')
+    @POST('/users')
     public getUsers(req: Request, res: Response): void {
         try {
             const authHeader: string = req.headers.authorization;
