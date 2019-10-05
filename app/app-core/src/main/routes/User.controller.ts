@@ -1,8 +1,8 @@
 import {Request, Response} from 'express-serve-static-core';
 import {Authenticated, POST, Provide} from '../../decorators/decorators';
-import UserProvider from '../providers/User.provider';
+import UserProvider from '../../providers/User.provider';
 import {IUserModel} from '../../interfaces/models.interface';
-import AuthProvider from '../providers/Auth.provider';
+import AuthProvider from '../../providers/Auth.provider';
 import AuthService from '../../services/Auth.service';
 
 export class UserController {

@@ -4,7 +4,7 @@ import http from 'http';
 import path from 'path';
 import {IControllerConfig, IProviderConfig, IRouteHandler, IServerConfig} from './decorator.interface';
 import {HttpMethod} from './decorator.enum';
-import FileService from '../app-core/src/main/services/File.service';
+import FileService from '../services/File.service';
 import jwt, {VerifyOptions} from 'jsonwebtoken';
 
 class DecoratorsMetadata {

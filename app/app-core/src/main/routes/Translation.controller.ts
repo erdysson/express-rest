@@ -1,6 +1,6 @@
 import {GET, Provide} from '../../decorators/decorators';
 import {Request, Response} from 'express-serve-static-core';
-import TranslationProvider from '../providers/Translation.provider';
+import TranslationProvider from '../../providers/Translation.provider';
 
 class TranslationController {
 

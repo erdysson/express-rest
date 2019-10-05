@@ -1,6 +1,6 @@
 import {POST, Provide} from '../../decorators/decorators';
 import { Request, Response } from 'express-serve-static-core';
-import ConfigProvider from '../providers/Config.provider';
+import ConfigProvider from '../../providers/Config.provider';
 
 class ConfigController {
 
