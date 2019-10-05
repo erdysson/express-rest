@@ -30,6 +30,11 @@ class App extends React.Component<Props, State> {
     }
 
     getAuthToken(): Promise<string> {
+        const authToken: string|null = localStorage.getItem('authToken');
+        if (authToken) {
+            console.log('auth token from local storage', authToken);
+            return Promise.resolve(authToken);
+        }
         return fetch('/login', {
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify({
@@ -40,6 +45,7 @@ class App extends React.Component<Props, State> {
         })
             .then((res: any) => res.json())
             .then((res: any) => {
+                localStorage.setItem('authToken', res.token);
                 console.log('auth token :', res.token);
                 return res.token;
             })
@@ -60,7 +66,6 @@ class App extends React.Component<Props, State> {
     }
 
     getUsers(): Promise<any[]> {
-        console.log('getting users', this.state.token);
         return fetch('/users', {
             headers: {
                 'Content-type': 'application/json',

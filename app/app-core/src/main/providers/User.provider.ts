@@ -38,7 +38,7 @@ class UserProvider {
             });
     }
 
-    public getUserByEmailData(email: string): Promise<IUserModel> {
+    public getUserByEmail(email: string): Promise<IUserModel> {
         return DbService.connect()
             .then((connection: Connection) => {
                 return new Promise<IUserModel>((resolve, reject) => {

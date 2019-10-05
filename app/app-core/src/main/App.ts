@@ -5,7 +5,7 @@ import express from 'express';
 import {Express} from 'express-serve-static-core';
 import {AuthController} from './routes/Auth.controller';
 import {UserController} from './routes/User.controller';
-import {Server} from '../../../../lib/decorators/decorators';
+import {Server} from '../../../decorators/decorators';
 import UserProvider from './providers/User.provider';
 import AuthProvider from './providers/Auth.provider';
 import TranslationController from './routes/Translation.controller';

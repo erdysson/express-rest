@@ -1,13 +1,31 @@
 import {Request, Response, NextFunction, Express} from "express-serve-static-core";
 import express from 'express';
-import http from "http";
+import http from 'http';
+import path from 'path';
 import {IControllerConfig, IProviderConfig, IRouteHandler, IServerConfig} from './decorator.interface';
 import {HttpMethod} from './decorator.enum';
+import FileService from '../app-core/src/main/services/File.service';
+import jwt, {VerifyOptions} from 'jsonwebtoken';
 
 class DecoratorsMetadata {
+
     private static providerInstanceMap: Map<string, object> = new Map<string, object>();
 
     private static controllers: Map<string, IControllerConfig> = new Map<string, IControllerConfig>();
+
+    private static publicKey: string;
+
+    private static getPublicKey(): Promise<string> {
+        if (DecoratorsMetadata.publicKey) {
+            return Promise.resolve(DecoratorsMetadata.publicKey);
+        }
+        const filePath: string = path.join(__dirname, '../security/public.key');
+        return new FileService().read(filePath)
+            .then((publicKey: string) => {
+                DecoratorsMetadata.publicKey = publicKey;
+                return DecoratorsMetadata.publicKey;
+            });
+    }
 
     public static registerProvider(providerName: string, providedTo: Function, index: number): void {
         const controllerName: string = providedTo.name;
@@ -64,9 +82,40 @@ class DecoratorsMetadata {
                 const instance: any = new (Controller as ObjectConstructor)(...providerInstances);
                 routeHandlers.forEach((routeHandler: IRouteHandler) => {
                     const httpMethod: string = routeHandler.httpMethod.valueOf().toString();
-                    console.log(routeHandler.path, ', handled by', routeHandler.method, 'is authenticated :', routeHandler.authenticated);
-                    (app as any)[httpMethod](routeHandler.path, (req: Request, res: Response, next: NextFunction) =>
-                        instance[routeHandler.method].apply(instance, [req, res, next])
+                    (app as any)[httpMethod](
+                        routeHandler.path,
+                        (req: Request, res: Response, next: NextFunction) => {
+                            const authPromise: Promise<void> = new Promise<void>((resolve, reject) => {
+                                if (routeHandler.authenticated) {
+                                    console.log('auth filter is protecting registered path :', routeHandler.path);
+                                    const authHeader: string = req.headers.authorization;
+                                    const token: string = authHeader ? (authHeader.startsWith('Bearer') ? authHeader.substring(7, authHeader.length) : null): null;
+                                    if (!authHeader) {
+                                        reject();
+                                    } else {
+                                        DecoratorsMetadata.getPublicKey()
+                                            .then((publicKey: string) => {
+                                                try {
+                                                    const verifyOptions: VerifyOptions = {
+                                                        algorithms: ['RS256']
+                                                    };
+                                                    const legit = jwt.verify(token, publicKey, verifyOptions);
+                                                    console.log('auth toke is verified', legit);
+                                                    resolve();
+                                                } catch (e) {
+                                                    console.log('can not verify the token', e);
+                                                    reject();
+                                                }
+                                            });
+                                    }
+                                } else {
+                                    resolve();
+                                }
+                            });
+                            authPromise
+                                .then(() => instance[routeHandler.method].apply(instance, [req, res, next]))
+                                .catch(() => res.sendStatus(401));
+                        }
                     );
                 });
             }
