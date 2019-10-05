@@ -1,4 +1,4 @@
-import {Authenticated, POST, Provide} from '../../../../decorators/decorators';
+import {POST, Provide} from '../../decorators/decorators';
 import { Request, Response } from 'express-serve-static-core';
 import ConfigProvider from '../providers/Config.provider';
 
@@ -7,40 +7,30 @@ class ConfigController {
     constructor(
         @Provide('ConfigProvider') private ConfigProvider: ConfigProvider
     ) {
-
+        //
     }
 
-    @Authenticated()
     @POST('/config/product')
     public getProductConfig(req: Request, res: Response): void {
-        try {
-            const branchCode: string = req.body.branchCode;
+        const branchCode: string = req.body.branchCode;
+        if (!branchCode) {
+            res.sendStatus(404);
+        } else {
             this.ConfigProvider.getProductConfig(branchCode)
                 .then((config: Record<string, any>) => res.json(config))
-                .catch((e) => {
-                    console.log(e);
-                    res.sendStatus(500);
-                });
-
-        } catch (e) {
-            res.sendStatus(404);
+                .catch(() => res.sendStatus(500));
         }
     }
 
-    @Authenticated()
     @POST('/config/home')
     public getHomeConfig(req: Request, res: Response): void {
-        try {
-            const branchCode: string = req.body.branchCode;
+        const branchCode: string = req.body.branchCode;
+        if (!branchCode) {
+            res.sendStatus(404);
+        } else {
             this.ConfigProvider.getHomeConfig(branchCode)
                 .then((config: Record<string, any>) => res.json(config))
-                .catch((e) => {
-                    console.log(e);
-                    res.sendStatus(500);
-                });
-
-        } catch (e) {
-            res.sendStatus(404);
+                .catch(() => res.sendStatus(500));
         }
     }
 }
