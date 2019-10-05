@@ -17,6 +17,7 @@
     "@types/morgan": "^1.7.36",
     "@types/node": "^12.6.8",
     "bcrypt": "^3.0.6",
+    "compression": "^1.7.4",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
@@ -32,6 +33,7 @@
     "typescript": "^3.5.3"
   },
   "devDependencies": {
+    "@types/compression": "^1.0.1",
     "@types/jsonwebtoken": "^8.3.4",
     "@types/mongoose": "^5.5.18"
   }
