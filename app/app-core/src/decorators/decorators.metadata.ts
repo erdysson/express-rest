@@ -6,6 +6,7 @@ import {IControllerConfig, IProviderConfig, IRouteHandler, IServerConfig} from '
 import {HttpMethod} from './decorator.enum';
 import FileService from '../services/File.service';
 import jwt, {VerifyOptions} from 'jsonwebtoken';
+import {StatusCode} from '../enums/StatusCode.enum';
 
 class DecoratorsMetadata {
 
@@ -114,7 +115,7 @@ class DecoratorsMetadata {
                             });
                             authPromise
                                 .then(() => instance[routeHandler.method].apply(instance, [req, res, next]))
-                                .catch(() => res.sendStatus(401));
+                                .catch(() => res.sendStatus(StatusCode.UNAUTHORIZED));
                         }
                     );
                 });

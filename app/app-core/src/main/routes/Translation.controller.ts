@@ -1,6 +1,7 @@
 import {GET, Provide} from '../../decorators/decorators';
 import {Request, Response} from 'express-serve-static-core';
 import TranslationProvider from '../../providers/Translation.provider';
+import {StatusCode} from '../../enums/StatusCode.enum';
 
 class TranslationController {
 
@@ -14,11 +15,11 @@ class TranslationController {
     public getTranslation(req: Request, res: Response): void {
         const branchCode: string = req.params.branchCode;
         if (!branchCode) {
-            res.sendStatus(404);
+            res.sendStatus(StatusCode.BAD_REQUEST);
         }
         this.TranslationProvider.get(branchCode)
             .then((translation: Record<string, string>) => res.json(translation))
-            .catch(() => res.sendStatus(500));
+            .catch(() => res.sendStatus(StatusCode.NOT_FOUND));
     }
 }
 

@@ -4,6 +4,7 @@ import UserProvider from '../../providers/User.provider';
 import {IUserModel} from '../../interfaces/models.interface';
 import AuthProvider from '../../providers/Auth.provider';
 import AuthService from '../../services/Auth.service';
+import {StatusCode} from '../../enums/StatusCode.enum';
 
 export class UserController {
 
@@ -23,10 +24,10 @@ export class UserController {
                     .then((token: string) => res.json({token}))
                     .catch((error: Error) => {
                         console.log('can not create token', error);
-                        res.sendStatus(500);
+                        res.sendStatus(StatusCode.INTERNAL_SERVER_ERROR);
                     })
             )
-            .catch(() => res.sendStatus(500));
+            .catch(() => res.sendStatus(StatusCode.BAD_REQUEST));
     }
 
     @POST('/login')
@@ -40,17 +41,17 @@ export class UserController {
                             .then((token: string) => res.json({token}))
                             .catch((error: Error) => {
                                 console.log('can not create token', error);
-                                res.sendStatus(500);
+                                res.sendStatus(StatusCode.INTERNAL_SERVER_ERROR);
                             })
                     )
                     .catch(() => {
                         console.log('can not validate password', user);
-                        res.sendStatus(405);
+                        res.sendStatus(StatusCode.BAD_REQUEST);
                     })
             )
             .catch((error: any) => {
                 console.log('Can not find user', error);
-                res.sendStatus(404);
+                res.sendStatus(StatusCode.NOT_FOUND);
             });
     }
 
@@ -59,6 +60,6 @@ export class UserController {
     public getUsers(req: Request, res: Response): void {
         this.UserProvider.getUsers()
             .then((users: IUserModel[]) => res.json({users}))
-            .catch((e) => res.sendStatus(500));
+            .catch((e) => res.sendStatus(StatusCode.INTERNAL_SERVER_ERROR));
     }
 }
