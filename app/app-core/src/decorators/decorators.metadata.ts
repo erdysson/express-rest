@@ -20,7 +20,7 @@ class DecoratorsMetadata {
         if (DecoratorsMetadata.publicKey) {
             return Promise.resolve(DecoratorsMetadata.publicKey);
         }
-        const filePath: string = path.join(__dirname, '../security/public.key');
+        const filePath: string = path.join(__dirname, '../../../security/public.key');
         return new FileService().read(filePath)
             .then((publicKey: string) => {
                 DecoratorsMetadata.publicKey = publicKey;
