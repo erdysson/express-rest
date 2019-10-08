@@ -1,0 +1,47 @@
+.title {
+  margin-bottom: 30px;
+}
+
+.inline {
+  display: flex;
+}
+.inline div {
+  width: 50%;
+}
+
+.form-control {
+  display: initial;
+}
+
+.fieldseg-group {
+  margin-left: 20px;
+  padding: 20px;
+}
+
+div {
+  margin-bottom: 20px;
+  margin-right: 10px;
+}
+
+.progress {
+  display: none;
+}
+
+.btn:focus, .upload-btn:focus{
+  outline: 0 !important;
+}
+
+.upload-btn {
+  color: #ffffff;
+  background-color: #F89406;
+  border: none;
+}
+
+.upload-btn:hover,
+.upload-btn:focus,
+.upload-btn:active,
+.upload-btn.active {
+  color: #ffffff;
+  background-color: #FA8900;
+  border: none;
+}

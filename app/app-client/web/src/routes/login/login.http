@@ -1,0 +1,6 @@
+POST /login 
+Content-Type: application/json 
+{
+    "email":"marina.castro@australteam.com", 
+    "password":"qweqwe"
+},

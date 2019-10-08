@@ -3,6 +3,8 @@ import {BrowserRouter as Router, Route, Link, NavLink} from 'react-router-dom';
 import Home from './home/Home';
 import About from './about/About';
 import Products from './products/Products';
+import Login from './login/Login';
+import Admin from './admin/Admin';
 import './routes.scss';
 import Contact from './contact/Contact';
 import TranslateService from '../services/Translate.service';
@@ -40,6 +42,8 @@ class Routes extends React.Component {
                         <Route path="/about" component={About} />
                         <Route path="/products" component={Products} />
                         <Route path="/contact" component={Contact} />
+                        <Route path="/login" component={Login} />
+                        <Route path="/admin" component={Admin} />
                     </div>
                 </Router>
             </div>

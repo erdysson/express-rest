@@ -1,0 +1,56 @@
+.login-page {
+  margin: auto;
+  padding: 8% 0 0;
+  width: 360px;
+
+}
+.form {
+  background: #ffffff;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+
+  input {
+    background: #f2f2f2;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Chivo", sans-serif;
+    font-size: 14px;
+    margin: 0 0 15px;
+    outline: 0;
+    padding: 15px;
+    width: 100%;  
+  }
+
+    button {
+      background: #4CAF50;
+      border: 0;
+      color: #FFFFFF;
+      cursor: pointer;
+      font-family: "Chivo", sans-serif;
+      font-size: 14px;
+      outline: 0;
+      padding: 15px;
+      text-transform: uppercase;
+      transition: all 0.3 ease;
+      -webkit-transition: all 0.3 ease;
+      width: 100%;
+
+      :hover,
+      :active,
+      :focus {
+          background: #43A047;
+      }
+    }
+
+    .error-message {
+      color: red;
+      display: none;
+      font-size: 12px;
+      margin: 15px 0 0;
+    }
+}
