@@ -10,6 +10,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        margin-bottom: 35px;
         padding: 10px 20px;
         width: 100%;
 
@@ -23,6 +24,10 @@
                 color: black;
                 display: flex;
                 justify-content: center;
+
+                img {
+                    width: 140px;
+                }
             }
 
             @media screen and (max-width: 600px) {
@@ -61,12 +66,12 @@
 
                         &::after {
                             background-color: #000000;
-                            bottom: -10px;
+                            bottom: -6px;
                             content: '';
-                            height: 4px;
+                            height: 3px;
                             left: 0;
                             position: absolute;
-                            width: 100%;
+                            width: 30px;
                         }
                     }
                 }
@@ -78,6 +83,7 @@
         display: flex;
         flex-grow: 1;
         flex-shrink: 1;
+        padding-bottom: 20px;
         width: 100%;
 
         & > * {

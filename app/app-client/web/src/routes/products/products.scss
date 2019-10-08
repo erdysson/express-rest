@@ -8,12 +8,17 @@
         flex-grow: 0;
         flex-shrink: 0;
         padding: 10px 0;
+        text-transform: uppercase;
 
         .route-product-link {
             margin: 0 10px;
 
             a {
-                color: black;
+                color: #898989;
+
+                &.active {
+                    color: #000000;
+                }
             }
 
             &:first-child {
@@ -28,5 +33,6 @@
 
     .route-product-content {
         display: flex;
+        margin: 40px 0;
     }
 }

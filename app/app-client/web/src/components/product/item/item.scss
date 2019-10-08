@@ -31,13 +31,15 @@
             background-repeat: no-repeat;
             background-size: 100%;
             display: flex;
+            min-height: 210px;
+            min-width: 210px;
             padding-top: calc(100% - 20px);
             transform-origin: center;
             transition-delay: .2s;
             transition-duration: .2s;
             transition-property: transform;
             transition-timing-function: ease-in;
-            width: calc(100% - 20px);
+            width: 100%;
         }
 
         .item-description {

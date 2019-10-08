@@ -10,6 +10,7 @@ a {
 
 html {
   font-family: Chivo-Regular;
+  font-size: 14px;
   min-height: 100%;
 }
 
@@ -24,9 +25,10 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
+    margin: 0 auto;
     min-height: 100vh;
-    padding: 0 30px;
-    width: 100%;
+    padding: 0 15px;
+    width: 1024px;
 
     @media screen and (max-width: 600px) {
       padding: 0;
