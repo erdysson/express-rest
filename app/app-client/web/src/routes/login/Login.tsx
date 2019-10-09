@@ -6,7 +6,7 @@ interface State  {
   password: string;
 }
 
-class Login extends Component<any, State> {
+class Login extends Component<any, any> {
 
   constructor(props: any) {
     super(props);
@@ -16,16 +16,17 @@ class Login extends Component<any, State> {
     };
 
     this.handleLogin = this.handleLogin.bind(this);
-    this.handleEmailChange = this.handleEmailChange.bind(this);
-    this.handlePassChange = this.handlePassChange.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  handlePassChange(event: any) {
-    this.setState({password: event.target.value});
-  }
+  handleChange(evt: any) {
+    let target = evt.target;
+    let name = target.name;
+    let value = target.value;
 
-  handleEmailChange(event: any) {
-    this.setState({email: event.target.value});
+    this.setState({
+      [name]: value  
+    });
   }
 
   handleLogin(event: any) {
@@ -39,8 +40,8 @@ class Login extends Component<any, State> {
             <div className="login-page">
                 <div className="form">
                     <form className="login-form" onSubmit={this.handleLogin}>
-                        <input type="text" value={this.state.email} onChange={this.handleEmailChange} placeholder="username"/>
-                        <input type="password" value={this.state.password} onChange={this.handlePassChange}  placeholder="password"/>
+                        <input type="text" name="email" value={this.state.email} onChange={this.handleChange} placeholder="username"/>
+                        <input type="password" name="password" value={this.state.password} onChange={this.handleChange}  placeholder="password"/>
                         <button type="submit" value="Login">Login</button>
                         <p className="error-message">Invalid Login Data</p>
                     </form>
